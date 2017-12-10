@@ -21,6 +21,7 @@ void Game::setup()
 		player2->receivePokemon(createPokemon(Pokemons(rand() % 2)));
 	}
 	
+	BattleGround battleground = BattleGround();
 }
 
 void Game::start()

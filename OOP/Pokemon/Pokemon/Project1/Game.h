@@ -2,6 +2,7 @@
 #include "Player.h"
 #include "Bulbasaur.h"
 #include "Charmander.h"
+#include "BattleGround.h"
 #include <ctime>
 #include <stdlib.h> 
 #include <iostream>
@@ -10,6 +11,8 @@ class Game
 {
 	Player* player1;
 	Player* player2;
+	
+	BattleGround battleground;
 
 	enum Pokemons {
 		eBulbasaur,
