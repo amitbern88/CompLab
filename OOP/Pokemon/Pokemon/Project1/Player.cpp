@@ -16,6 +16,7 @@ void Player::initPlayer()
 void Player::receivePokemon(Pokemon * pokemon)
 {
 	cout << "Player " << index << " has received the pokemon " << pokemon->getName() << endl;
+	pokemons.size++;
 }
 
 bool Player::hasLivePokemons()

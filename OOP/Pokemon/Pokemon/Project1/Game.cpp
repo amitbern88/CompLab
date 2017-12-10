@@ -33,12 +33,12 @@ void Game::start()
 		player1->printAvailablePokemons();
 		cin >> player1chose;
 		cout << "Player 2, please select a pokemon for battle" << endl;
-
 		player2->printAvailablePokemons();
 		cin >> player2chose;
 		Pokemon* pokemon1 = player1->getPokemon(player1chose);
 		Pokemon* pokemon2 = player2->getPokemon(player2chose);
-		int winner = battle((*pokemon1), (*pokemon2));
+		BattleGround newBattle;
+		int winner = newBattle.battle((*pokemon1), (*pokemon2));
 	}
 }
 

@@ -6,6 +6,6 @@ FightingMethod::FightingMethod()
 
 FightingMethod::FightingMethod(char * inName, int inLvl)
 {
-	methodName == inName;
-	lvl == inLvl;
+	methodName = inName;
+	lvl = inLvl;
 }

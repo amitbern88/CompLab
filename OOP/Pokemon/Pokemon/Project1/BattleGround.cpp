@@ -29,7 +29,10 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 		{
 			return winType;
 		}
-		//#TODO: add XP supiriority
+		else if (inPlayer1.getXP() > inPlayer2.getXP()) //XP Superiority
+			return 1;
+		else if (inPlayer1.getXP() < inPlayer2.getXP())
+			return 2;
 		else if (method1.getLvl() > method2.getLvl()) //Player 1 is stronger than 2
 		{
 			inPlayer1.PokemonWon();
