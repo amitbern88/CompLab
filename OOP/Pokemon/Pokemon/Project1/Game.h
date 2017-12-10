@@ -24,6 +24,8 @@ public:
 
 	Pokemon* createPokemon(Pokemons pokemonEnum);
 
+	void handlePokemonXpAfterBattle(Player* player, Pokemon* pokemon);
+
 	~Game();
 
 private:

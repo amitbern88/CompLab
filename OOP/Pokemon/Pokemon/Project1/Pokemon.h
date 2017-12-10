@@ -2,7 +2,7 @@
 class Pokemon
 {
 	
-	int XP;
+	int mXp;
 
 	int evolutionLevel;
 
@@ -17,9 +17,15 @@ public:
 
 	PokemonType type;
 
+	Pokemon(PokemonType pokeType, int evolutionLevel);
+	
 	virtual char* getName();
 
-	Pokemon(PokemonType pokeType, int evolutionLevel);
+	int getXp();
+
+	bool shouldEvolve();
+
+	Pokemon* evolve();
 
 	int basicAttack();
 

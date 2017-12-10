@@ -65,8 +65,61 @@ void PokeList::remove(int index)
 		delete(iterator->data);
 		delete(iterator);
 		size--;
-		cout << "Polygon at index " << index << " was deleted" << endl;
 	}
+}
+
+void PokeList::remove(Pokemon * pokemon)
+{
+	ListNode* iterator = head;
+	ListNode* prev = NULL;
+	bool found = false;
+
+	if (head == NULL) return;
+
+	while (!found && iterator->nextNode != NULL)
+	{
+		if (iterator->data == pokemon)
+			found = true;
+		else
+		{
+			prev = iterator;
+			iterator = iterator->nextNode;
+		}
+	}
+
+	if (!found) return;
+
+	if (prev == NULL)
+	{
+		head = head->nextNode;
+	}
+	else
+	{
+		prev->nextNode = iterator->nextNode;
+	}
+	delete(iterator->data);
+	delete(iterator);
+	size--;
+}
+
+void PokeList::replace(Pokemon * toBeReplaced, Pokemon * replacement)
+{
+	ListNode* iterator = head;
+	bool found = false;
+
+	if (head == NULL) return;
+
+	while (!found && iterator->nextNode != NULL)
+	{
+		if (iterator->data == toBeReplaced)
+			found = true;
+		else
+			iterator = iterator->nextNode;
+	}
+
+	if (!found) return;
+
+	iterator->data = replacement;
 }
 
 void PokeList::printPokeList()

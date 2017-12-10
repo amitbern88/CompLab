@@ -15,6 +15,10 @@ public:
 
 	void remove(int index);
 
+	void remove(Pokemon* pokemon);
+
+	void replace(Pokemon* toBeReplaced, Pokemon* replacement);
+
 	void printPokeList();
 
 	~PokeList();
