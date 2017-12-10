@@ -3,6 +3,7 @@
 #define POKEMON_H
 
 #include <iostream>
+#include "FightingMethod.h"
 #pragma once
 
 using namespace std;
@@ -33,7 +34,7 @@ public:
 
 	int basicAttack();
 
-	void chooseFightingMethods();
+	FightingMethod* chooseFightingMethods();
 	void PokemonWon();
 	void PokemonLost();
 

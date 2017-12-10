@@ -11,7 +11,7 @@ int Pokemon::basicAttack()
 	return 0;
 }
 
-void Pokemon::chooseFightingMethods()
+FightingMethod* Pokemon::chooseFightingMethods() //Needs to edit this
 {
 	cout << getName() << " Fighting Methods are: " << endl <<
 	"1. Tackle" << endl;

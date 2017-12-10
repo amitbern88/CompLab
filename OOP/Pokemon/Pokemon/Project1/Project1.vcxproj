@@ -79,6 +79,7 @@
     <ClCompile Include="BattleGround.cpp" />
     <ClCompile Include="Bulbasaur.cpp" />
     <ClCompile Include="Charmander.cpp" />
+    <ClCompile Include="FightingMethod.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Ivysaur.cpp" />
     <ClCompile Include="ListNode.cpp" />
@@ -91,12 +92,14 @@
     <ClInclude Include="BattleGround.h" />
     <ClInclude Include="Bulbasaur.h" />
     <ClInclude Include="Charmander.h" />
+    <ClInclude Include="FightingMethod.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Ivysaur.h" />
     <ClInclude Include="ListNode.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PokeList.h" />
     <ClInclude Include="Pokemon.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
