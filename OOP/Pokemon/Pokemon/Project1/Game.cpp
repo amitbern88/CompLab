@@ -38,7 +38,7 @@ void Game::start()
 		cin >> player2chose;
 		Pokemon* pokemon1 = player1->getPokemon(player1chose);
 		Pokemon* pokemon2 = player2->getPokemon(player2chose);
-		int winner = battle(pokemon1, pokemon2);
+		int winner = battle((*pokemon1), (*pokemon2));
 	}
 }
 

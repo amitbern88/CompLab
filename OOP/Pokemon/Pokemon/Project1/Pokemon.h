@@ -3,7 +3,6 @@
 #define POKEMON_H
 
 #include <iostream>
-#include "FightingMethod.h"
 #pragma once
 
 using namespace std;
@@ -15,7 +14,7 @@ class Pokemon
 
 	int evolutionLevel;
 
-	int fightingMethod;
+	FightingMethod* fightingMethods;
 
 public:
 
@@ -35,11 +34,13 @@ public:
 	int basicAttack();
 
 	FightingMethod* chooseFightingMethods();
+	
 	void PokemonWon();
+	
 	void PokemonLost();
 
-	int getFightingMethod() { return fightingMethod; };
 	int getXP() { return XP; };
+	
 	~Pokemon();
 };
 
