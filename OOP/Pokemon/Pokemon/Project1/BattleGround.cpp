@@ -18,6 +18,7 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 	bool moreThan30;
 	while (mRounds > 0)
 	{
+		cout << "Round: " << mRounds%3 + 1 << " Fight!" << endl;
 		mRounds--;
 		cout << "Player 1 please Choose Fighting Method: " << endl;
 		FightingMethod method1 = inPlayer1.chooseFightingMethods();
@@ -34,28 +35,16 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 		else if (inPlayer1.getXP() < inPlayer2.getXP())
 			return 2;
 		else if (method1.getLvl() > method2.getLvl()) //Player 1 is stronger than 2
-		{
-			inPlayer1.PokemonWon();
-			inPlayer2.PokemonLost();
-		}
+			return 1;
 		else if (method1.getLvl() < method2.getLvl())//Player 2 is stronger than 1
-		{
-			inPlayer1.PokemonLost();
-			inPlayer2.PokemonWon();
-		}
+			return 2;
 		else if (method1.getName() == method2.getName()) //players chose same fighting method
 		{
 			int randomStart = rand();
 			if (randomStart >= 0.5) //Player 1 won the round
-			{
-				inPlayer1.PokemonWon();
-				inPlayer2.PokemonLost();
-			}
+				return 1;
 			else
-			{
-				inPlayer1.PokemonLost();
-				inPlayer2.PokemonWon();
-			}
+				return 2;
 		}
 		if (inPlayer1.getRoundsWon() == 2 || inPlayer2.getRoundsWon() == 2) //Which player won 2/3 rounds
 		{
@@ -69,6 +58,8 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 			return 2;
 		else if (inPlayer2.getXP() == 0) //Player 2 lost
 			return 1;
+		cout << "Battle not finished! Press any key to start next round" << endl;
+		system("pause");
 	}
 }
 

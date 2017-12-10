@@ -31,12 +31,14 @@ FightingMethod Pokemon::chooseFightingMethods()
 
 void Pokemon::PokemonWon() //Raise XP by 5 pts
 {
+	cout << "Congratsulations! " << getName() << " won! +5XP" << endl;
 	mXp = mXp + 5;
 	roundsWon++;
 }
 
 void Pokemon::PokemonLost() //Reduce XP by 5 pts
 {
+	cout << "Too bad! " << getName() << " lost! -5XP" << endl;
 	mXp = mXp - 5;
 }
 

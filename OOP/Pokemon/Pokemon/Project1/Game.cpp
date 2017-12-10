@@ -4,6 +4,7 @@ using namespace std;
 
 Game::Game()
 {
+	battleground;
 }
 
 void Game::setup()
@@ -21,14 +22,15 @@ void Game::setup()
 		player2->receivePokemon(createPokemon(Pokemons(rand() % 2)));
 	}
 	
-	BattleGround battleground = BattleGround();
 }
 
 void Game::start()
 {
+	int player1chose, player2chose, input;
+	bool printSubMenu;
 	while (gameIsNotFinished())
 	{
-		int player1chose, player2chose;
+		printSubMenu = true;
 		cout << "Player 1, please select a pokemon for battle" << endl;
 		player1->printAvailablePokemons();
 		cin >> player1chose;
@@ -37,8 +39,38 @@ void Game::start()
 		cin >> player2chose;
 		Pokemon* pokemon1 = player1->getPokemon(player1chose);
 		Pokemon* pokemon2 = player2->getPokemon(player2chose);
-		BattleGround newBattle;
-		int winner = newBattle.battle((*pokemon1), (*pokemon2));
+		int winner = battleground.battle((*pokemon1), (*pokemon2));
+		if (winner == 1)
+		{
+			pokemon1->PokemonWon();
+			pokemon2->PokemonLost();
+		}
+		else
+		{
+			pokemon2->PokemonWon();
+			pokemon1->PokemonLost();
+		}
+		while (printSubMenu)
+		{
+			cout << "Press (1) to play another round\nPress (2) to display players status\nPress (3) to exit" << endl;
+			cin >> input;
+			if (input == 1)
+			{
+				printSubMenu = false;
+				continue;
+			}
+			else if (input == 2)
+			{
+				cout << "We need to add prints here" << endl;
+			}
+			else
+			{
+				printSubMenu = false;
+				break;
+			}
+		}
+		if (input == 3) //exit game
+			break;
 	}
 }
 

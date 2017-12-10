@@ -28,8 +28,8 @@ Pokemon* PokeList::get(int index)
 {
 	int i;
 	ListNode* iterator = head;
-	ListNode* prev = 0;
-	for (i = 0; i < index; i++)
+	ListNode* prev = NULL;
+	for (i = 1; i < index; i++)
 	{
 		prev = iterator;
 		iterator = iterator->nextNode;
@@ -65,7 +65,7 @@ void PokeList::remove(int index)
 		delete(iterator->data);
 		delete(iterator);
 		size--;
-		cout << "Polygon at index " << index << " was deleted" << endl;
+		cout << "Pokemon List at index " << index << " was deleted" << endl;
 	}
 }
 
@@ -77,10 +77,11 @@ void PokeList::printPokeList()
 		return;
 	}
 	ListNode* iterator = head;
-	int i = 0;
+	int i = 1;
 	while (iterator != NULL)
 	{
 		cout << i++ << ": " << iterator->data->getName() << endl;
+		iterator = iterator->nextNode;
 	}
 }
 
