@@ -31,7 +31,7 @@ public:
 
 	int basicAttack();
 
-	void printFightingMethods(Pokemon& inPoke);
+	void printFightingMethods();
 
 	~Pokemon();
 };

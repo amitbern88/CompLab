@@ -11,9 +11,9 @@ int Pokemon::basicAttack()
 	return 0;
 }
 
-void Pokemon::printFightingMethods(Pokemon& inPoke)
+void Pokemon::printFightingMethods()
 {
-	cout << inPoke.getName() << " Fighting Methods are: " << endl;
+	cout << getName() << " Fighting Methods are: " << endl;
 }
 
 char* Pokemon::getName()
