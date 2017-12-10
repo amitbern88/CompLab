@@ -1,4 +1,12 @@
+
+#ifndef POKEMON_H
+#define POKEMON_H
+
+#include <iostream>
 #pragma once
+
+using namespace std;
+
 class Pokemon
 {
 	
@@ -23,6 +31,9 @@ public:
 
 	int basicAttack();
 
+	void printFightingMethods(Pokemon& inPoke);
+
 	~Pokemon();
 };
 
+#endif

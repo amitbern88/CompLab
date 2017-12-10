@@ -1,4 +1,3 @@
-#include "Main.h"
 #include "Game.h"
 #include <iostream>
 
@@ -8,6 +7,6 @@ void main()
 	char begin;
 	Game game = Game();
 	game.setup();
-	cout << "A game has been setup, press any key to begin" << endl;
+	cout << "A game has been setup, press any key to continue" << endl;
 	game.start();
 }
