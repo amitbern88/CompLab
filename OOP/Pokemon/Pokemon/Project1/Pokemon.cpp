@@ -19,7 +19,7 @@ FightingMethod Pokemon::chooseFightingMethods()
 	cout << getName() << " Fighting Methods are: " << endl;
 	for (i = 0; i < evolutionLevel; i++)
 	{
-		cout << i << ". " << fightingMethods[i].getName() << endl;
+		cout << i + 1 << ". " << fightingMethods[i].getName() << endl;
 	}
 	cout << "Please choose method: " << endl;
 	cin >> index;
