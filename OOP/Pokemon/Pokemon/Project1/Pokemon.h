@@ -3,6 +3,7 @@
 #define POKEMON_H
 
 #include <iostream>
+#include "FightingMethod.h"
 #pragma once
 
 using namespace std;
@@ -10,10 +11,10 @@ using namespace std;
 class Pokemon
 {
 	
-	int XP;
+	int mXp;
 
 	int evolutionLevel;
-
+	int roundsWon;
 	FightingMethod* fightingMethods;
 
 public:
@@ -33,13 +34,15 @@ public:
 
 	int basicAttack();
 
-	FightingMethod* chooseFightingMethods();
+	FightingMethod chooseFightingMethods();
 	
 	void PokemonWon();
 	
 	void PokemonLost();
 
-	int getXP() { return XP; };
+	int getXP() { return mXp; };
+	void clearRoundsWon() { roundsWon = 0; };
+	int getRoundsWon() { return roundsWon; };
 	
 	~Pokemon();
 };

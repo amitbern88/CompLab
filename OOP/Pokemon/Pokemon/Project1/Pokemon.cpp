@@ -5,7 +5,7 @@
 Pokemon::Pokemon(PokemonType pokeType, int evolution) : type(pokeType), evolutionLevel(evolution)
 {
 	fightingMethods = new FightingMethod[evolution];
-	fightingMethods[0] = new FightingMethod("Tackle", 1);
+	fightingMethods[0] = FightingMethod("Tackle", 1);
 }
 
 int Pokemon::basicAttack()
@@ -13,25 +13,26 @@ int Pokemon::basicAttack()
 	return 0;
 }
 
-FightingMethod* Pokemon::chooseFightingMethods()
+FightingMethod Pokemon::chooseFightingMethods()
 {
-	int i;
+	int i, index;
 	cout << getName() << " Fighting Methods are: " << endl;
-	for (i = 0; i < evolution; i++)
+	for (i = 0; i < evolutionLevel; i++)
 	{
-		cout << i << ". " << fightingMethods[i]->getName() << endl;
-		cout << "Please choose method: " << endl;
-		cin >> fightingMethod;
+		cout << i << ". " << fightingMethods[i].getName() << endl;
 	}
-	if (fightingMethod < evolution)
-		return fightingMethods[fightingMethod];	
+	cout << "Please choose method: " << endl;
+	cin >> index;
+	if (index < evolutionLevel)
+		return fightingMethods[index];	
 	
-	return nullptr;
+	//#TODO add exception for wrond input
 }
 
 void Pokemon::PokemonWon() //Raise XP by 5 pts
 {
 	mXp = mXp + 5;
+	roundsWon++;
 }
 
 void Pokemon::PokemonLost() //Reduce XP by 5 pts
@@ -46,5 +47,5 @@ char* Pokemon::getName()
 
 Pokemon::~Pokemon()
 {
-	delete[evolution](fightingMethods);
+	delete[evolutionLevel](fightingMethods);
 }

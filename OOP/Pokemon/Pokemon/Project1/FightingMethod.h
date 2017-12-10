@@ -7,6 +7,7 @@ class FightingMethod {
 	int lvl;
 
 public:
+	FightingMethod();
 	FightingMethod(char* inName, int inLvl);
 	~FightingMethod() {};
 	char* getName() { return methodName; };
