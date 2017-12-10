@@ -1,8 +1,16 @@
+
+#ifndef POKEMON_H
+#define POKEMON_H
+
+#include <iostream>
 #pragma once
+
+using namespace std;
+
 class Pokemon
 {
 	
-	int mXp;
+	int XP;
 
 	int evolutionLevel;
 
@@ -17,18 +25,15 @@ public:
 
 	PokemonType type;
 
-	Pokemon(PokemonType pokeType, int evolutionLevel);
-	
 	virtual char* getName();
 
-	int getXp();
-
-	bool shouldEvolve();
-
-	Pokemon* evolve();
+	Pokemon(PokemonType pokeType, int evolutionLevel);
 
 	int basicAttack();
+
+	void printFightingMethods(Pokemon& inPoke);
 
 	~Pokemon();
 };
 
+#endif

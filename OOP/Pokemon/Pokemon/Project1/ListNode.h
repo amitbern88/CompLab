@@ -5,7 +5,6 @@ class ListNode
 {
 public:
 	ListNode* nextNode;
-
 	Pokemon* data;
 
 	ListNode(ListNode* next, Pokemon* pokemon);
