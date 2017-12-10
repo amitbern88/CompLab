@@ -37,9 +37,6 @@ void Game::start()
 		Pokemon* pokemon1 = player1->getPokemon(player1chose);
 		Pokemon* pokemon2 = player2->getPokemon(player2chose);
 		int winner = battle(pokemon1, pokemon2);
-
-		handlePokemonXpAfterBattle(player1, pokemon1);
-		handlePokemonXpAfterBattle(player2, pokemon2);
 	}
 }
 
@@ -53,14 +50,6 @@ Pokemon* Game::createPokemon(Pokemons pokemonEnum)
 		default:
 			throw new exception();
 	}
-}
-
-void Game::handlePokemonXpAfterBattle(Player* player, Pokemon* pokemon)
-{
-	if (pokemon->getXp() == 0)
-		player->killPokemon(pokemon);
-	else if (pokemon->shouldEvolve())
-		player->evolvePokemon(pokemon, pokemon->evolve());
 }
 
 

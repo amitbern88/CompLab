@@ -76,6 +76,7 @@
     <Text Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BattleGround.cpp" />
     <ClCompile Include="Bulbasaur.cpp" />
     <ClCompile Include="Charmander.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -87,12 +88,12 @@
     <ClCompile Include="Pokemon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BattleGround.h" />
     <ClInclude Include="Bulbasaur.h" />
     <ClInclude Include="Charmander.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Ivysaur.h" />
     <ClInclude Include="ListNode.h" />
-    <ClInclude Include="Main.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PokeList.h" />
     <ClInclude Include="Pokemon.h" />

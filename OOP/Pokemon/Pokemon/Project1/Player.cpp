@@ -28,16 +28,6 @@ void Player::printAvailablePokemons()
 	pokemons.printPokeList();
 }
 
-void Player::killPokemon(Pokemon * pokemon)
-{
-	pokemons.remove(pokemon);
-}
-
-void Player::evolvePokemon(Pokemon * toEvolve, Pokemon * evolved)
-{
-	pokemons.replace(toEvolve, evolved);
-}
-
 Pokemon * Player::getPokemon(int index)
 {
 	return pokemons.get(index);
