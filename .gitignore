@@ -2,4 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+/OOP/Pokemon/Pokemon/Pokemon.VC.db
+*.VC.db
 /OOP/Pokemon/Pokemon/Pokemon.VC.VC.opendb
