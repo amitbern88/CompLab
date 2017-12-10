@@ -14,6 +14,8 @@ class Pokemon
 
 	int evolutionLevel;
 
+	int fightingMethod;
+
 public:
 
 	enum PokemonType {
@@ -31,7 +33,11 @@ public:
 
 	int basicAttack();
 
-	void printFightingMethods(Pokemon& inPoke);
+	void chooseFightingMethods();
+	void PokemonWon();
+	void PokemonLost();
+
+	int getFightingMethod() { return fightingMethod; };
 
 	~Pokemon();
 };

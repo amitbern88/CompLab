@@ -3,6 +3,7 @@
 #define BATTLEGOUND_H
 
 #include <iostream>
+#include <ctime>
 #include "Pokemon.h"
 #include "Player.h"
 
