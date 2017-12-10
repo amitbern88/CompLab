@@ -15,9 +15,9 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 	{
 		mRounds--;
 		cout << "Player 1 please Choose Fighting Method: " << endl;
-		inPlayer1.chooseFightingMethods();
+		FightingMethod* fightingMethod1 = inPlayer1.chooseFightingMethods();
 		cout << "Player 2 please Choose Fighting Method: " << endl;
-		inPlayer2.chooseFightingMethods();
+		FightingMethod* fightingMethod2 = inPlayer2.chooseFightingMethods();
 		if (inPlayer1.getFightingMethod() == inPlayer2.getFightingMethod()) //players chose same fighting method
 		{
 			int randomStart = rand();

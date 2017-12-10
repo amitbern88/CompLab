@@ -14,7 +14,7 @@ class Pokemon
 
 	int evolutionLevel;
 
-	int fightingMethod;
+	FightingMethod* fightingMethods;
 
 public:
 
@@ -33,12 +33,14 @@ public:
 
 	int basicAttack();
 
-	void chooseFightingMethods();
+	FightingMethod* chooseFightingMethods();
+	
 	void PokemonWon();
+	
 	void PokemonLost();
 
-	int getFightingMethod() { return fightingMethod; };
 	int getXP() { return XP; };
+	
 	~Pokemon();
 };
 
