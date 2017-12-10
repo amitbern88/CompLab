@@ -118,7 +118,7 @@ void PokeList::replace(Pokemon * toBeReplaced, Pokemon * replacement)
 	}
 
 	if (!found) return;
-
+	delete(iterator->data);
 	iterator->data = replacement;
 }
 

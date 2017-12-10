@@ -58,16 +58,9 @@ Pokemon* Game::createPokemon(Pokemons pokemonEnum)
 void Game::handlePokemonXpAfterBattle(Player* player, Pokemon* pokemon)
 {
 	if (pokemon->getXp() == 0)
-	{
 		player->killPokemon(pokemon);
-	}
-	else
-	{
-		if (pokemon->shouldEvolve())
-		{
-			player->evolvePokemon(pokemon, pokemon->evolve());
-		}
-	}
+	else if (pokemon->shouldEvolve())
+		player->evolvePokemon(pokemon, pokemon->evolve());
 }
 
 
