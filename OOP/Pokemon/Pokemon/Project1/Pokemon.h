@@ -38,7 +38,7 @@ public:
 	void PokemonLost();
 
 	int getFightingMethod() { return fightingMethod; };
-
+	int getXP() { return XP; };
 	~Pokemon();
 };
 

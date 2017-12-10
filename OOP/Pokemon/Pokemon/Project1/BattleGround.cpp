@@ -24,15 +24,15 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 			if (randomStart >= 0.5) //Player 1 won the round
 			{
 				inPlayer1.PokemonWon();
-				inPLayer2.PokemonLost();
+				inPlayer2.PokemonLost();
 			}
 			else
 			{
 				inPlayer1.PokemonLost();
 				inPlayer2.PokemonWon();
 			}
-
 		}
+		if(inPlayer1.getXP() == 0 || inPlayer2.getXP() == 0)
 
 	}
 }
