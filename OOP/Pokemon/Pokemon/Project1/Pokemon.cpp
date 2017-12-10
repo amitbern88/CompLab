@@ -13,7 +13,7 @@ int Pokemon::basicAttack()
 	return 0;
 }
 
-void Pokemon::chooseFightingMethods()
+FightingMethod* Pokemon::chooseFightingMethods()
 {
 	int i;
 	cout << getName() << " Fighting Methods are: " << endl;
@@ -23,7 +23,10 @@ void Pokemon::chooseFightingMethods()
 		cout << "Please choose method: " << endl;
 		cin >> fightingMethod;
 	}
+	if (fightingMethod < evolution)
+		return fightingMethods[fightingMethod];	
 	
+	return nullptr;
 }
 
 void Pokemon::PokemonWon() //Raise XP by 5 pts

@@ -33,7 +33,7 @@ public:
 
 	int basicAttack();
 
-	void chooseFightingMethods();
+	FightingMethod* chooseFightingMethods();
 	
 	void PokemonWon();
 	
