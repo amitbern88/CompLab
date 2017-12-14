@@ -5,6 +5,7 @@
 #include <cmath>
 #include <iostream>
 #include <ctime>
+#include <stdlib.h> 
 #include "Pokemon.h"
 #include "Player.h"
 

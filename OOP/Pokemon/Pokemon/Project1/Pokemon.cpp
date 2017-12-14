@@ -1,14 +1,14 @@
 #include "Pokemon.h"
 #include <exception>
 
-Pokemon::Pokemon(PokemonType pokeType, int evolutionLevel) : type(pokeType), evolutionLevel(evolutionLevel)
+Pokemon::Pokemon(PokemonType pokeType, int evolutionLevel) : evolutionLevel(evolutionLevel), type(pokeType)
 {
 	fightingMethods = new FightingMethod[evolutionLevel];
 	fightingMethods[0] = FightingMethod("Tackle", 1);
 	mXp = 20;
 }
 
-Pokemon::Pokemon(PokemonType pokeType, int evolutionLevel, int inXP) : type(pokeType), evolutionLevel(evolutionLevel)
+Pokemon::Pokemon(PokemonType pokeType, int evolutionLevel, int inXP) : evolutionLevel(evolutionLevel), type(pokeType)
 {
 	fightingMethods = new FightingMethod[evolutionLevel];
 	fightingMethods[0] = FightingMethod("Tackle", 1);
