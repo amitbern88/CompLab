@@ -21,10 +21,10 @@ protected:
 public:
 
 	enum PokemonType {
-		eAquatic,
-		eFire,
-		eEarth,
-		eElectricity
+		eAquatic = 0,
+		eFire = 1,
+		eEarth = 2,
+		eElectricity = 3
 	};
 
 	PokemonType type;

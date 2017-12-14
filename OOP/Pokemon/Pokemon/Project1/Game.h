@@ -19,12 +19,12 @@ class Game
 	BattleGround battleground;
 
 	enum Pokemons {
-		eBulbasaur,
-		eCharmander,
-		ePichu,
-		eSquirtel,
-		eGeodude,
-		ePoliwag
+		eBulbasaur = 0,
+		eCharmander = 1,
+		ePichu = 2,
+		eSquirtel = 3,
+		eGeodude = 4,
+		ePoliwag = 5
 	};
 public:
 	Game();
