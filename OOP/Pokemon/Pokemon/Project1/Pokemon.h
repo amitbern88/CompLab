@@ -15,10 +15,11 @@ class Pokemon
 
 	int evolutionLevel;
 	int roundsWon;
-	FightingMethod* fightingMethods;
+	
 
 protected:
 	bool mCanEvolve;
+	FightingMethod* fightingMethods;
 
 public:
 

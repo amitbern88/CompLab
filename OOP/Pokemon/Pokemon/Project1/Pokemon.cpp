@@ -30,7 +30,7 @@ FightingMethod Pokemon::chooseFightingMethods()
 		return fightingMethods[index - 1];
 	}
 	
-	//#TODO add exception for wrond input
+	//#TODO add exception for wrong input
 }
 
 void Pokemon::PokemonWon() //Raise XP by 5 pts
