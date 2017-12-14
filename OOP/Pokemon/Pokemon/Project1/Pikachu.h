@@ -2,7 +2,7 @@
 #include "Pichu.h"
 #include "Raichu.h"
 class Pikachu :
-	public Pokemon
+	public Pichu
 {
 public:
 	Pikachu();
