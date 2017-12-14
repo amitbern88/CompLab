@@ -114,7 +114,7 @@ void Game::handleBattleFinish(Player * player, Pokemon * pokemon)
 {
 	if (pokemon->shouldEvolve())
 		player->evolvePokemon(pokemon, pokemon->getEvolution());
-	else if (pokemon->getXP() < 0)
+	else if (pokemon->getXP() <= 0)
 		player->killPokemon(pokemon);
 }
 
