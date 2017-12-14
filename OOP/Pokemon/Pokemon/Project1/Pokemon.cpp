@@ -24,8 +24,11 @@ FightingMethod Pokemon::chooseFightingMethods()
 	}
 	cout << "Please choose method: " << endl;
 	cin >> index;
-	if (index < evolutionLevel)
-		return fightingMethods[index];	
+	if (index <= evolutionLevel)
+	{
+		mXp = mXp - (index);
+		return fightingMethods[index - 1];
+	}
 	
 	//#TODO add exception for wrond input
 }
@@ -38,7 +41,6 @@ void Pokemon::PokemonWon() //Raise XP by 5 pts
 
 void Pokemon::PokemonLost() //Reduce XP by 5 pts
 {
-	cout << "Too bad! " << getName() << " lost! -5XP" << endl;
 	mXp = mXp - 5;
 }
 
