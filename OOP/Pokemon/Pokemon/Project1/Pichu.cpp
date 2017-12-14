@@ -18,7 +18,7 @@ char* Pichu::getName()
 
 Pokemon * Pichu::getEvolution()
 {
-	return new Pikachu;
+	return (Pokemon*) new Pikachu;
 }
 
 Pichu::~Pichu()

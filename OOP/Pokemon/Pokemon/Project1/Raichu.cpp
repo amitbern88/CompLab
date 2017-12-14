@@ -1,9 +1,10 @@
 #include "Raichu.h"
 
-Raichu::Raichu() : Pikachu(Pokemon::PokemonType::eElectricity, 3)
+Raichu::Raichu() : Pokemon(Pokemon::PokemonType::eElectricity, 3)
 {
 	mCanEvolve = false;
-	fightingMethods[3] = FightingMethod("Thunder", 3);
+	fightingMethods[1] = FightingMethod("Electric Punch", 2);
+	fightingMethods[2] = FightingMethod("Thunder", 3);
 }
 
 Raichu::~Raichu()

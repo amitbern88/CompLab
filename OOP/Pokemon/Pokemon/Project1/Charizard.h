@@ -3,7 +3,7 @@
 #include "Charmeleon.h"
 
 class Charizard :
-	public Charmeleon
+	public Pokemon
 {
 public:
 	Charizard();
