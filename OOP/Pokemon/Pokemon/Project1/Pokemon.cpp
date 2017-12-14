@@ -52,7 +52,7 @@ char* Pokemon::getName()
 
 bool Pokemon::shouldEvolve()
 {
-	if (mXp >= 50 && mCanEvolve)
+	if ((mXp >= (50 * evolutionLevel)) && mCanEvolve)
 		return true;
 	return false;
 }

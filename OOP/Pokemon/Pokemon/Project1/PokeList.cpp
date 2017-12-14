@@ -100,6 +100,7 @@ void PokeList::replace(Pokemon * original, Pokemon * newPokemon)
 	findPokemonToDelete(original, originalNode, prevOriginalNode);
 	if (originalNode != NULL)
 	{
+		cout << endl << original->getName() << " has evolved to " << newPokemon->getName() << "!\n" << endl;
 		Pokemon* toDelete = originalNode->data;
 		originalNode->data = newPokemon;
 		delete(toDelete);
