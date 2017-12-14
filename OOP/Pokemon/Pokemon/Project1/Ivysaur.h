@@ -9,5 +9,8 @@ public:
 	char* getName();
 
 	~Ivysaur();
+
+	Pokemon* getEvolution();
+
 };
 

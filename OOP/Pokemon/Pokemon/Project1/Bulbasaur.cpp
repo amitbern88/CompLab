@@ -11,6 +11,11 @@ char* Bulbasaur::getName()
 	return "Bulbasaur";
 }
 
+Pokemon * Bulbasaur::getEvolution()
+{
+	return new Ivysaur;
+}
+
 Bulbasaur::~Bulbasaur()
 {
 }

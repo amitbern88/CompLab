@@ -5,6 +5,8 @@
 Ivysaur::Ivysaur() : Pokemon(Pokemon::PokemonType::eEarth, 2)
 {
 	mCanEvolve = true;
+	fightingMethods[1] = FightingMethod("Vine Whip", 2);
+
 }
 
 char* Ivysaur::getName()
@@ -14,4 +16,9 @@ char* Ivysaur::getName()
 
 Ivysaur::~Ivysaur()
 {
+}
+
+Pokemon * Ivysaur::getEvolution()
+{
+	return nullptr;
 }

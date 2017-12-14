@@ -11,6 +11,6 @@ public:
 
 	char* getName();
 
-	virtual Pokemon* getEvolution();
+	Pokemon* getEvolution();
 };
 
