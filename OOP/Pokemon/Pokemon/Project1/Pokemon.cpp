@@ -65,7 +65,7 @@ bool Pokemon::shouldEvolve()
 
 Pokemon * Pokemon::getEvolution()
 {
-	return nullptr;
+	return NULL;
 }
 
 Pokemon::~Pokemon()

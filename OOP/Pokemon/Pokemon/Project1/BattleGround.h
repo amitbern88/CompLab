@@ -2,6 +2,7 @@
 #ifndef BATTLEGROUND_H
 #define BATTLEGOUND_H
 
+#include <cmath>
 #include <iostream>
 #include <ctime>
 #include "Pokemon.h"
