@@ -3,9 +3,10 @@
 #include <iostream>
 
 using namespace std;
-void main()
+int main()
 {
 	Game game = Game();
 	game.setup();
 	game.start();
+	return 0;
 }
