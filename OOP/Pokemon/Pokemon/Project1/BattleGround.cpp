@@ -19,7 +19,6 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 	while (mRounds <= 3)
 	{
 		cout << "Round: " << mRounds << " Fight!" << endl;
-		mRounds++;
 		cout << "Player 1 please Choose Fighting Method: " << endl;
 		FightingMethod method1 = inPlayer1.chooseFightingMethods();
 		cout << "Player 2 please Choose Fighting Method: " << endl;
@@ -62,6 +61,7 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 		else if (inPlayer2.getXP() == 0) //Player 2 lost
 			return 1;
 		cout << "Battle not finished! Press any key to start next round" << endl;
+		mRounds++;
 		system("pause");
 	}
 }
