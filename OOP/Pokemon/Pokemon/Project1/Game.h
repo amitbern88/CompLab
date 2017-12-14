@@ -10,6 +10,7 @@
 #include <ctime>
 #include <stdlib.h> 
 #include <iostream>
+
 	enum Pokemons {
 		eBulbasaur = 0,
 		eCharmander = 1,
