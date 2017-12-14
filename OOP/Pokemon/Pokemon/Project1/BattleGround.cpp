@@ -64,7 +64,7 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 			return 1;
 		cout << "The battle is not finished!" << endl;
 		mRounds++;
-		system("pause");
+		//system("pause");
 	}
 	return 0;
 }

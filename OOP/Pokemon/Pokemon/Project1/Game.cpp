@@ -4,7 +4,6 @@ using namespace std;
 
 Game::Game()
 {
-	battleground;
 }
 
 void Game::setup()
@@ -29,7 +28,7 @@ void Game::start()
 	bool printSubMenu;
 
 	printGameSetup();
-	system("pause");
+	//system("pause");
 	cout << endl << "Let's battle!!" << endl << endl;
 
 	while (gameIsNotFinished())
@@ -79,7 +78,7 @@ void Game::start()
 			cout << endl << "=======================================" << endl << endl << endl;
 			cout << "		Player " << winner << " won the Game!" << endl;
 			cout << endl << endl << "=======================================" << endl << endl;
-			system("pause");
+			//system("pause");
 		}
 	}
 }

@@ -70,5 +70,5 @@ Pokemon * Pokemon::getEvolution()
 
 Pokemon::~Pokemon()
 {
-	delete[evolutionLevel](fightingMethods);
+	delete(fightingMethods);
 }

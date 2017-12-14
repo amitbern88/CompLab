@@ -3,7 +3,7 @@
 
 using namespace std;
 
-PokeList::PokeList() : size(0), head(NULL)
+PokeList::PokeList() :  head(NULL) , size(0)
 {
 }
 
@@ -28,10 +28,8 @@ Pokemon* PokeList::get(int index)
 {
 	int i;
 	ListNode* iterator = head;
-	ListNode* prev = NULL;
 	for (i = 1; i < index; i++)
 	{
-		prev = iterator;
 		iterator = iterator->nextNode;
 	}
 	return iterator->data;
@@ -148,7 +146,6 @@ PokeList::~PokeList()
 void PokeList::findPokemonToDelete(Pokemon * pokemon, ListNode *& toDelete, ListNode *& prevToDelete)
 {
 	bool found = false;
-	int i;
 	while (!found && toDelete != NULL)
 	{
 		if (toDelete->data == pokemon)
