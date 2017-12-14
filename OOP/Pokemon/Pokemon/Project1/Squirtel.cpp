@@ -14,7 +14,7 @@ char* Squirtel::getName()
 
 Pokemon * Squirtel::getEvolution()
 {
-	return new Wartortle;
+	return new Wartortle(mXp);
 }
 
 Squirtel::~Squirtel()

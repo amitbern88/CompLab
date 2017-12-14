@@ -2,11 +2,18 @@
 #include <exception>
 
 
-Pokemon::Pokemon(PokemonType pokeType, int evolution) : type(pokeType), evolutionLevel(evolution)
+Pokemon::Pokemon(PokemonType pokeType, int evolutionLevel) : type(pokeType), evolutionLevel(evolutionLevel)
 {
-	fightingMethods = new FightingMethod[evolution];
+	fightingMethods = new FightingMethod[evolutionLevel];
 	fightingMethods[0] = FightingMethod("Tackle", 1);
 	mXp = 20;
+}
+
+Pokemon::Pokemon(PokemonType pokeType, int evolutionLevel, int inXP) : type(pokeType), evolutionLevel(evolutionLevel)
+{
+	fightingMethods = new FightingMethod[evolutionLevel];
+	fightingMethods[0] = FightingMethod("Tackle", 1);
+	mXp = inXP;
 }
 
 int Pokemon::basicAttack()

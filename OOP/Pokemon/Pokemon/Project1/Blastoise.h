@@ -4,7 +4,7 @@ class Blastoise :
 	public Pokemon
 {
 public:
-	Blastoise();
+	Blastoise(int inXP);
 	~Blastoise();
 
 	char* getName();

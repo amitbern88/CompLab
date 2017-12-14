@@ -5,7 +5,7 @@ class Golem :
 	public Pokemon
 {
 public:
-	Golem();
+	Golem(int inXP);
 
 	~Golem();
 

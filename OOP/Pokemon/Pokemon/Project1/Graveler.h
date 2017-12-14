@@ -5,7 +5,7 @@ class Graveler :
 	public Pokemon
 {
 public:
-	Graveler();
+	Graveler(int inXP);
 
 	~Graveler();
 

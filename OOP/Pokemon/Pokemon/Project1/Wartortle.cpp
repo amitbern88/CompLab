@@ -1,6 +1,6 @@
 #include "Wartortle.h"
 
-Wartortle::Wartortle() : Pokemon(Pokemon::PokemonType::eAquatic, 2)
+Wartortle::Wartortle(int inXP) : Pokemon(Pokemon::PokemonType::eAquatic, 2, inXP)
 {
 	mCanEvolve = true;
 	fightingMethods[1] = FightingMethod("Water Gun", 2);
@@ -17,5 +17,5 @@ char * Wartortle::getName()
 
 Pokemon * Wartortle::getEvolution()
 {
-	return new Blastoise;
+	return new Blastoise(mXp);
 }

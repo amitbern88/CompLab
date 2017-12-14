@@ -5,8 +5,7 @@ class Charmeleon :
 	public Pokemon
 {
 public:
-	Charmeleon();
-	Charmeleon(PokemonType pokeType, int evolutionLevel);
+	Charmeleon(int inXP);
 	~Charmeleon();
 	char* getName();
 	Pokemon* getEvolution();

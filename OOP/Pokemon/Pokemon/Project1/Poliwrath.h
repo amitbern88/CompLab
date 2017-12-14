@@ -4,7 +4,7 @@ class Poliwrath :
 	public Pokemon
 {
 public:
-	Poliwrath();
+	Poliwrath(int inXP);
 	~Poliwrath();
 
 	char* getName();

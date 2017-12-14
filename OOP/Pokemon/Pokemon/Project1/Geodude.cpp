@@ -17,5 +17,5 @@ char * Geodude::getName()
 
 Pokemon * Geodude::getEvolution()
 {
-	return new Graveler;
+	return new Graveler(mXp);
 }

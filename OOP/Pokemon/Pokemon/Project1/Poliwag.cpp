@@ -16,5 +16,5 @@ char * Poliwag::getName()
 
 Pokemon * Poliwag::getEvolution()
 {
-	return new Poliwhirl;
+	return new Poliwhirl(mXp);
 }

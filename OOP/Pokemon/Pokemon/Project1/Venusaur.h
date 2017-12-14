@@ -4,7 +4,7 @@ class Venusaur :
 	public Pokemon
 {
 public:
-	Venusaur();
+	Venusaur(int inXP);
 	
 	~Venusaur();
 

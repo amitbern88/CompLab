@@ -5,7 +5,7 @@ class Pikachu :
 	public Pokemon
 {
 public:
-	Pikachu();
+	Pikachu(int inXP);
 	~Pikachu();
 
 	char* getName();
