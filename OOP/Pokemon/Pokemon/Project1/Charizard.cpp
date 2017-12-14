@@ -1,6 +1,6 @@
 #include "Charizard.h"
 
-Charizard::Charizard() : Pokemon(Pokemon::PokemonType::eFire, 3)
+Charizard::Charizard(int inXP) : Pokemon(Pokemon::PokemonType::eFire, 3, inXP)
 {
 	mCanEvolve = false;
 	fightingMethods[1] = FightingMethod("Flame Burst", 2);

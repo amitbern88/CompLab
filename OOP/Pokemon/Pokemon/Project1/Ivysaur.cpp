@@ -2,7 +2,7 @@
 
 
 
-Ivysaur::Ivysaur() : Pokemon(Pokemon::PokemonType::eEarth, 2)
+Ivysaur::Ivysaur(int inXP) : Pokemon(Pokemon::PokemonType::eEarth, 2, inXP)
 {
 	mCanEvolve = true;
 	fightingMethods[1] = FightingMethod("Vine Whip", 2);
@@ -20,5 +20,5 @@ Ivysaur::~Ivysaur()
 
 Pokemon * Ivysaur::getEvolution()
 {
-	return new Venusaur;
+	return new Venusaur(mXp);
 }

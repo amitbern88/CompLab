@@ -1,6 +1,6 @@
 #include "Blastoise.h"
 
-Blastoise::Blastoise() : Pokemon(Pokemon::PokemonType::eAquatic, 3)
+Blastoise::Blastoise(int inXP) : Pokemon(Pokemon::PokemonType::eAquatic, 3, inXP)
 {
 	mCanEvolve = false;
 	fightingMethods[1] = FightingMethod("Water Gun", 2);

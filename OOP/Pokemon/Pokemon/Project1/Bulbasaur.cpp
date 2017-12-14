@@ -13,7 +13,7 @@ char* Bulbasaur::getName()
 
 Pokemon * Bulbasaur::getEvolution()
 {
-	return new Ivysaur;
+	return new Ivysaur(mXp);
 }
 
 Bulbasaur::~Bulbasaur()

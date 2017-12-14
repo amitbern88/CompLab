@@ -1,6 +1,6 @@
 #include "Poliwhirl.h"
 
-Poliwhirl::Poliwhirl() : Pokemon(Pokemon::PokemonType::eAquatic, 2)
+Poliwhirl::Poliwhirl(int inXP) : Pokemon(Pokemon::PokemonType::eAquatic, 2, inXP)
 {
 	mCanEvolve = true;
 	fightingMethods[1] = FightingMethod("Double Slap", 2);
@@ -17,5 +17,5 @@ char * Poliwhirl::getName()
 
 Pokemon * Poliwhirl::getEvolution()
 {
-	return new Poliwrath;
+	return new Poliwrath(mXp);
 }

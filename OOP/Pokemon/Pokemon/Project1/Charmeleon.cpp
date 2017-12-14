@@ -1,13 +1,8 @@
 #include "Charmeleon.h"
 
-Charmeleon::Charmeleon() : Pokemon(Pokemon::PokemonType::eFire, 2)
+Charmeleon::Charmeleon(int inXP) : Pokemon(Pokemon::PokemonType::eFire, 2, inXP)
 {
 	mCanEvolve = true;
-	fightingMethods[1] = FightingMethod("Flame Burst", 2);
-}
-
-Charmeleon::Charmeleon(PokemonType pokeType, int evolutionLevel) : Pokemon(pokeType, evolutionLevel)
-{
 	fightingMethods[1] = FightingMethod("Flame Burst", 2);
 }
 
@@ -23,5 +18,5 @@ char * Charmeleon::getName()
 
 Pokemon * Charmeleon::getEvolution()
 {
-	return new Charizard;
+	return new Charizard(mXp);
 }

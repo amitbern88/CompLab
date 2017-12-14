@@ -1,6 +1,6 @@
 #include "Poliwrath.h"
 
-Poliwrath::Poliwrath() : Pokemon(Pokemon::PokemonType::eAquatic, 3)
+Poliwrath::Poliwrath(int inXP) : Pokemon(Pokemon::PokemonType::eAquatic, 3, inXP)
 {
 	mCanEvolve = false;
 	fightingMethods[1] = FightingMethod("Double Slap", 2);

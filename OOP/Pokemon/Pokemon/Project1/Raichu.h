@@ -4,7 +4,7 @@ class Raichu :
 	public Pokemon
 {
 public:
-	Raichu();
+	Raichu(int inXP);
 
 	~Raichu();
 

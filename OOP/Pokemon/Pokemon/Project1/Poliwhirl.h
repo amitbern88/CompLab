@@ -5,7 +5,7 @@ class Poliwhirl :
 	public Pokemon
 {
 public:
-	Poliwhirl();
+	Poliwhirl(int inXP);
 	~Poliwhirl();
 
 	char* getName();

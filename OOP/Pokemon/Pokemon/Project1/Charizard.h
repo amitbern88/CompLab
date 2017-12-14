@@ -6,7 +6,7 @@ class Charizard :
 	public Pokemon
 {
 public:
-	Charizard();
+	Charizard(int inXP);
 	~Charizard();
 	char* getName();
 };

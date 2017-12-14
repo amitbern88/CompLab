@@ -12,7 +12,7 @@ char* Charmander::getName()
 
 Pokemon * Charmander::getEvolution()
 {
-	return new Charmeleon;
+	return new Charmeleon(mXp);
 }
 
 Charmander::~Charmander()

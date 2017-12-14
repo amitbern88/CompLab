@@ -5,7 +5,7 @@ class Ivysaur :
 	public Pokemon
 {
 public:
-	Ivysaur();
+	Ivysaur(int inXP);
 
 	char* getName();
 

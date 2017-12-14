@@ -32,6 +32,7 @@ public:
 	virtual char* getName();
 
 	Pokemon(PokemonType pokeType, int evolutionLevel);
+	Pokemon(PokemonType pokeType, int evolutionLevel, int inXP);
 
 	int basicAttack();
 

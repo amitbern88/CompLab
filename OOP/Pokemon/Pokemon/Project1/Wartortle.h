@@ -5,7 +5,7 @@ class Wartortle :
 	public Pokemon
 {
 public:
-	Wartortle();
+	Wartortle(int inXP);
 	~Wartortle();
 
 	char* getName();
