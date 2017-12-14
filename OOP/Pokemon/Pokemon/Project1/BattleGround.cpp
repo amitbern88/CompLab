@@ -28,23 +28,26 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 		moreThan30 = XpDiffMoreThan30(inPlayer1, inPlayer2);
 		if (winType != 0 && !moreThan30) //Check pokemon family
 		{
-			return winType;
+			if (winType == 1)
+				finishRound(inPlayer1, inPlayer2);
+			else
+				finishRound(inPlayer2, inPlayer1);
 		}
 		else if (inPlayer1.getXP() > inPlayer2.getXP()) //XP Superiority
-			return 1;
+			finishRound(inPlayer1, inPlayer2);
 		else if (inPlayer1.getXP() < inPlayer2.getXP())
-			return 2;
+			finishRound(inPlayer2, inPlayer1);
 		else if (method1.getLvl() > method2.getLvl()) //Player 1 is stronger than 2
-			return 1;
+			finishRound(inPlayer1, inPlayer2);
 		else if (method1.getLvl() < method2.getLvl())//Player 2 is stronger than 1
-			return 2;
+			finishRound(inPlayer2, inPlayer1);
 		else if (method1.getName() == method2.getName()) //players chose same fighting method
 		{
 			int randomStart = rand();
 			if (randomStart >= 0.5) //Player 1 won the round
-				return 1;
+				finishRound(inPlayer1, inPlayer2);
 			else
-				return 2;
+				finishRound(inPlayer2, inPlayer1);
 		}
 		if (inPlayer1.getRoundsWon() == 2 || inPlayer2.getRoundsWon() == 2) //Which player won 2/3 rounds
 		{
@@ -93,4 +96,10 @@ bool BattleGround::XpDiffMoreThan30(Pokemon & inPoke1, Pokemon & inPoke2){
 	if (abs(inPoke1.getXP() - inPoke2.getXP()) > 30)
 		return true;
 	return false;
+}
+
+void BattleGround::finishRound(Pokemon & winner, Pokemon & loser)
+{
+	winner.PokemonWon();
+	loser.PokemonLost();
 }

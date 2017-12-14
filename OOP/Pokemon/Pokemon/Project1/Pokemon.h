@@ -41,7 +41,11 @@ public:
 	void PokemonLost();
 
 	int getXP() { return mXp; };
+	
 	void clearRoundsWon() { roundsWon = 0; };
+
+	void incrementRoundsWon() { roundsWon++; };
+
 	int getRoundsWon() { return roundsWon; };
 	
 	~Pokemon();
