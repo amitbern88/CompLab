@@ -1,13 +1,17 @@
 #pragma once
 #include "Pokemon.h"
-#include "Wartortle.h"
-class Squirtel :
+#include "Graveler.h"
+
+class Geodude :
 	public Pokemon
 {
 public:
-	Squirtel();
-	~Squirtel();
+	Geodude();
+
+	~Geodude();
+
 	char* getName();
 	Pokemon* getEvolution();
-	
+
+
 };

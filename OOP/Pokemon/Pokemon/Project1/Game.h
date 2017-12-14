@@ -4,6 +4,8 @@
 #include "Charmander.h"
 #include "Squirtel.h"
 #include "Pichu.h"
+#include "Geodude.h"
+#include "Poliwag.h"
 #include "BattleGround.h"
 #include <ctime>
 #include <stdlib.h> 
@@ -20,7 +22,9 @@ class Game
 		eBulbasaur,
 		eCharmander,
 		ePichu,
-		eSquirtel
+		eSquirtel,
+		eGeodude,
+		ePoliwag
 	};
 public:
 	Game();

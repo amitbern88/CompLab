@@ -18,8 +18,8 @@ void Game::setup()
 	srand(time(NULL));
 	for (i = 0; i < 3; i++)
 	{
-		player1->receivePokemon(createPokemon(Pokemons(rand() % 4)));
-		player2->receivePokemon(createPokemon(Pokemons(rand() % 4)));
+		player1->receivePokemon(createPokemon(Pokemons(rand() % 6)));
+		player2->receivePokemon(createPokemon(Pokemons(rand() % 6)));
 	}
 	
 }
@@ -83,13 +83,17 @@ Pokemon* Game::createPokemon(Pokemons pokemonEnum)
 {
 	switch (pokemonEnum) {
 		case eBulbasaur:
-			return new Bulbasaur();
+			return new Bulbasaur;
 		case eCharmander:
-			return new Charmander();
+			return new Charmander;
 		case ePichu:
-			return new Pichu();
+			return new Pichu;
 		case eSquirtel:
-			return new Squirtel();
+			return new Squirtel;
+		case eGeodude:
+			return new Geodude;
+		case ePoliwag:
+			return new Poliwag;
 		default:
 			throw new exception();
 	}

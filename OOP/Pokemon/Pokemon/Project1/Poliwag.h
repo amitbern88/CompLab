@@ -1,13 +1,14 @@
 #pragma once
 #include "Pokemon.h"
-#include "Wartortle.h"
-class Squirtel :
+#include "Poliwhirl.h"
+class Poliwag :
 	public Pokemon
 {
 public:
-	Squirtel();
-	~Squirtel();
+	Poliwag();
+	~Poliwag();
+
 	char* getName();
 	Pokemon* getEvolution();
-	
+
 };
