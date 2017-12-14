@@ -7,15 +7,8 @@ Player::Player(int num) : index(num)
 {
 }
 
-void Player::initPlayer()
-{
-	cout << "Player " << index << ", you received the following pokemons:" << endl;
-
-}
-
 void Player::receivePokemon(Pokemon * pokemon)
 {
-	cout << "Player " << index << " has received the pokemon " << pokemon->getName() << endl;
 	pokemons.add(pokemon);
 }
 

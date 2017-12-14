@@ -13,7 +13,6 @@ void Game::setup()
 
 	player1 = new Player(1);
 	player2 = new Player(2);
-	cout << "Created players, distributing pokemons" << endl;
 
 	srand(time(NULL));
 	for (i = 0; i < 3; i++)
@@ -28,6 +27,11 @@ void Game::start()
 {
 	int player1chose, player2chose, input;
 	bool printSubMenu;
+
+	printGameSetup();
+	system("pause");
+	cout << endl << "Let's battle!!" << endl << endl;
+
 	while (gameIsNotFinished())
 	{
 		printSubMenu = true;
@@ -49,7 +53,7 @@ void Game::start()
 		{
 			while (printSubMenu)
 			{
-				cout << "Press (1) to play another battle\nPress (2) to display players status\nPress (3) to exit" << endl;
+				cout << "Press (1) to play another battle\nPress (2) to display the player's status\nPress (3) to exit the game" << endl;
 				cin >> input;
 				if (input == 1)
 				{
@@ -72,9 +76,10 @@ void Game::start()
 		}
 		else
 		{
+			cout << endl << "=======================================" << endl << endl << endl;
+			cout << "		Player " << winner << " won the Game!" << endl;
 			cout << endl << endl << "=======================================" << endl << endl;
-			cout << "Player " << winner << " won the Game!" << endl;
-			cout << endl << endl << "=======================================" << endl << endl;
+			system("pause");
 		}
 	}
 }
@@ -113,6 +118,17 @@ void Game::handleBattleFinish(Player * player, Pokemon * pokemon)
 {
 	if (pokemon->shouldEvolve())
 		player->evolvePokemon(pokemon, pokemon->getEvolution());
-	else if (pokemon->getXP() < 0)
+	else if (pokemon->getXP() <= 0)
 		player->killPokemon(pokemon);
+}
+
+void Game::printGameSetup()
+{
+	cout << "Welcome to Nimrod & Amit's Pokemon game!" << endl;
+	cout << "Player 1's pokemons:" << endl;
+	player1->printAvailablePokemons();
+	cout << endl;
+	cout << "Player 2's pokemons:" << endl;
+	player2->printAvailablePokemons();
+	cout << endl;
 }
