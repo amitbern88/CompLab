@@ -1,6 +1,8 @@
 #pragma once
 #include "Pokemon.h"
 #include "PokeList.h"
+#include <iostream>
+
 
 class Player
 {
