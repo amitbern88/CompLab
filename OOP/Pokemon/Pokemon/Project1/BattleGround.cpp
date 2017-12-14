@@ -56,9 +56,9 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 			else
 				return 2;
 		}
-		if (inPlayer1.getXP() == 0) //Player 1 lost
+		if (inPlayer1.getXP() <= 0) //Player 1 lost
 			return 2;
-		else if (inPlayer2.getXP() == 0) //Player 2 lost
+		else if (inPlayer2.getXP() <= 0) //Player 2 lost
 			return 1;
 		cout << "Battle not finished! Press any key to start next round" << endl;
 		mRounds++;

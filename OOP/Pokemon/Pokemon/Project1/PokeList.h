@@ -24,5 +24,5 @@ public:
 	~PokeList();
 
 private:
-	void findPokemonToDelete(Pokemon* pokemon, ListNode* toDelete, ListNode* prevToDelete);
+	void findPokemonToDelete(Pokemon* pokemon, ListNode * &toDelete, ListNode * &prevToDelete);
 };

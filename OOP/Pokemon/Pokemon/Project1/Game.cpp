@@ -40,32 +40,42 @@ void Game::start()
 		Pokemon* pokemon1 = player1->getPokemon(player1chose);
 		Pokemon* pokemon2 = player2->getPokemon(player2chose);
 		int winner = battleground.battle((*pokemon1), (*pokemon2));
+		cout << "=======================================" << endl;
 		cout << "Player " << winner << " won the battle!" << endl;
+		cout << "=======================================" << endl << endl;
 		handleBattleFinish(player1, pokemon1);
 		handleBattleFinish(player2, pokemon2);
-
-		while (printSubMenu)
+		if (gameIsNotFinished())
 		{
-			cout << "Press (1) to play another battle\nPress (2) to display players status\nPress (3) to exit" << endl;
-			cin >> input;
-			if (input == 1)
+			while (printSubMenu)
 			{
-				printSubMenu = false;
-				continue;
+				cout << "Press (1) to play another battle\nPress (2) to display players status\nPress (3) to exit" << endl;
+				cin >> input;
+				if (input == 1)
+				{
+					printSubMenu = false;
+					continue;
+				}
+				else if (input == 2)
+				{
+					player1->printStatus();
+					player2->printStatus();
+				}
+				else
+				{
+					printSubMenu = false;
+					break;
+				}
 			}
-			else if (input == 2)
-			{
-				player1->printStatus();
-				player2->printStatus();
-			}
-			else
-			{
-				printSubMenu = false;
+			if (input == 3) //exit game
 				break;
-			}
 		}
-		if (input == 3) //exit game
-			continue;
+		else
+		{
+			cout << endl << endl << "=======================================" << endl << endl;
+			cout << "Player " << winner << " won the Game!" << endl;
+			cout << endl << endl << "=======================================" << endl << endl;
+		}
 	}
 }
 
