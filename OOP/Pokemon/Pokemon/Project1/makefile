@@ -1,16 +1,16 @@
+SOURCES = Main.cpp Game.cpp Player.cpp PokeList.cpp ListNode.cpp BattleGround.cpp \
+	Bulbasaur.cpp Charmander.cpp Pichu.cpp Squirtel.cpp Geodude.cpp \
+	Blastoise.cpp Charizard.cpp Charmeleon.cpp FightingMethod.cpp Golem.cpp \
+	Graveler.cpp Ivysaur.cpp Pikachu.cpp Player.cpp Pokemon.cpp Poliwag.cpp \
+	Poliwhirl.cpp Poliwrath.cpp Raichu.cpp Venusaur.cpp Wartortle.cpp
+
+
 all: pokemon
 
-pokemon: 		main.o BattleGround.o
-	g++ -Wall -o pokemon main.o
+pokemon: 
+	g++ -g -Wall -o pokemon $(SOURCES)
 
-main.o: 		main.cpp
-	g++ -Wall -o main.o main.cpp 
-	
-BattleGround.o: BattleGround.cpp
-	g++ -Wall -o BattleGround.o BattleGround.cpp BattleGround.h
 
-Blastoise.o:	Blastoise.cpp
-	g++ -Wall -o Blastoise.o Blastoise.cpp Blastoise.h
-	
-clean: 
-	rm -f *.o pokemon
+
+clean:
+	rm -rf *.o pokemon
