@@ -84,14 +84,9 @@
     <ClCompile Include="Ivysaur.cpp" />
     <ClCompile Include="ListNode.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Pikachu.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PokeList.cpp" />
     <ClCompile Include="Pokemon.cpp" />
-    <ClCompile Include="Pichu.cpp" />
-    <ClCompile Include="Raichu.cpp" />
-    <ClCompile Include="Squirtel.cpp" />
-    <ClCompile Include="Venusaur.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BattleGround.h" />
@@ -101,14 +96,9 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Ivysaur.h" />
     <ClInclude Include="ListNode.h" />
-    <ClInclude Include="Pichu.h" />
-    <ClInclude Include="Pikachu.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PokeList.h" />
     <ClInclude Include="Pokemon.h" />
-    <ClInclude Include="Raichu.h" />
-    <ClInclude Include="Squirtel.h" />
-    <ClInclude Include="Venusaur.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

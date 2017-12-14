@@ -1,5 +1,5 @@
 #include "Pokemon.h"
-
+#include <exception>
 
 
 Pokemon::Pokemon(PokemonType pokeType, int evolution) : type(pokeType), evolutionLevel(evolution)
@@ -30,7 +30,8 @@ FightingMethod Pokemon::chooseFightingMethods()
 		return fightingMethods[index - 1];
 	}
 	
-	//#TODO add exception for wrong input
+	//#TODO add exception for wrond input
+	throw invalid_argument("index");
 }
 
 void Pokemon::PokemonWon() //Raise XP by 5 pts

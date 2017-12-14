@@ -41,29 +41,14 @@
     <ClCompile Include="Charmander.cpp">
       <Filter>Source Files\Pokemons</Filter>
     </ClCompile>
+    <ClCompile Include="Ivysaur.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="BattleGround.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FightingMethod.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Pichu.cpp">
-      <Filter>Source Files\Pokemons</Filter>
-    </ClCompile>
-    <ClCompile Include="Squirtel.cpp">
-      <Filter>Source Files\Pokemons</Filter>
-    </ClCompile>
-    <ClCompile Include="Ivysaur.cpp">
-      <Filter>Source Files\Pokemons</Filter>
-    </ClCompile>
-    <ClCompile Include="Pikachu.cpp">
-      <Filter>Source Files\Pokemons</Filter>
-    </ClCompile>
-    <ClCompile Include="Raichu.cpp">
-      <Filter>Source Files\Pokemons</Filter>
-    </ClCompile>
-    <ClCompile Include="Venusaur.cpp">
-      <Filter>Source Files\Pokemons</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -95,21 +80,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FightingMethod.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Pichu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Squirtel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Pikachu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Raichu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Venusaur.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
