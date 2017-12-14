@@ -16,12 +16,14 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 	inPlayer2.clearRoundsWon();
 	int winType;
 	bool moreThan30;
+
+	cout << endl << "========================" << endl << "Battle started!" << endl << "========================" << endl;
 	while (mRounds <= 3)
 	{
-		cout << "Round: " << mRounds << " Fight!" << endl;
-		cout << "Player 1 please Choose Fighting Method: " << endl;
+		cout << "Round " << mRounds << " - Fight!" << endl;
+		cout << "Player 1, ";
 		FightingMethod method1 = inPlayer1.chooseFightingMethods();
-		cout << "Player 2 please Choose Fighting Method: " << endl;
+		cout << "Player 2, ";
 		FightingMethod method2 = inPlayer2.chooseFightingMethods();
 		winType = getWinningType(inPlayer1.type, inPlayer2.type);
 		moreThan30 = XpDiffMoreThan30(inPlayer1, inPlayer2);
@@ -60,7 +62,7 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 			return 2;
 		else if (inPlayer2.getXP() <= 0) //Player 2 lost
 			return 1;
-		cout << "Battle not finished! Press any key to start next round" << endl;
+		cout << "The battle is not finished!" << endl;
 		mRounds++;
 		system("pause");
 	}
@@ -102,8 +104,9 @@ bool BattleGround::XpDiffMoreThan30(Pokemon & inPoke1, Pokemon & inPoke2){
 void BattleGround::finishRound(int winnerIndex, Pokemon & winner, Pokemon & loser)
 {
 	int loserIndex = winnerIndex == 1 ? 2 : 1;
-	cout << "Player " << winnerIndex << ", congratulations! You won round " << mRounds << "! " << winner.getName() << " +5XP" << endl;
+	cout << "Player " << winnerIndex << ", congratulations! You won round " << mRounds << "! " << winner.getName() << " gained 5 XP" << endl;
 	winner.PokemonWon();
-	cout << "Player " << loserIndex << ", too bad, You lost round " << mRounds << ". " << loser.getName() << " -5XP" << endl;
+	cout << "Player " << loserIndex << ", too bad, You lost round " << mRounds << ". " << loser.getName() << " lost 5 XP" << endl;
 	loser.PokemonLost();
+	cout << endl;
 }

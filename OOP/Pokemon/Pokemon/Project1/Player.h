@@ -9,8 +9,6 @@ class Player
 public:
 	Player(int num);
 
-	void initPlayer();
-
 	void receivePokemon(Pokemon* pokemon);
 
 	bool hasLivePokemons();

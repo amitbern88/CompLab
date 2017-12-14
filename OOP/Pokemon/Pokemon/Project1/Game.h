@@ -34,6 +34,8 @@ public:
 	~Game();
 
 private:
+	void printGameSetup();
+	
 	bool gameIsNotFinished();
 
 	void handleBattleFinish(Player* player, Pokemon* pokemon);

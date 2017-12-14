@@ -17,12 +17,12 @@ int Pokemon::basicAttack()
 FightingMethod Pokemon::chooseFightingMethods()
 {
 	int i, index;
-	cout << getName() << " Fighting Methods are: " << endl;
+	cout << getName() << "'s Fighting Methods are: " << endl;
 	for (i = 0; i < evolutionLevel; i++)
 	{
 		cout << i + 1 << ". " << fightingMethods[i].getName() << endl;
 	}
-	cout << "Please choose method: " << endl;
+	cout << "Please choose a method: " << endl;
 	cin >> index;
 	if (index <= evolutionLevel)
 	{

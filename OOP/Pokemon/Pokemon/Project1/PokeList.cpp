@@ -87,7 +87,7 @@ void PokeList::remove(Pokemon* pokemon)
 	{
 		prevToDelete->nextNode = toDelete->nextNode;
 	}
-	cout << pokemon->getName() << " was killed.." << endl;
+	cout << "Oh no! " << pokemon->getName() << " was killed!" << endl << endl;
 	delete(toDelete->data);
 	delete(toDelete);
 	size--;
