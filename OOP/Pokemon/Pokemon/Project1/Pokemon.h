@@ -17,6 +17,9 @@ class Pokemon
 	int roundsWon;
 	FightingMethod* fightingMethods;
 
+protected:
+	bool mCanEvolve;
+
 public:
 
 	enum PokemonType {
@@ -47,6 +50,10 @@ public:
 	void incrementRoundsWon() { roundsWon++; };
 
 	int getRoundsWon() { return roundsWon; };
+
+	bool shouldEvolve();
+
+	virtual Pokemon* getEvolution();
 	
 	~Pokemon();
 };

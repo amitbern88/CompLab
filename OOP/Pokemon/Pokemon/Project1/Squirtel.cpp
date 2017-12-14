@@ -4,6 +4,7 @@
 
 Squirtel::Squirtel() : Pokemon(Pokemon::PokemonType::eAquatic, 1)
 {
+	mCanEvolve = true;
 }
 
 char* Squirtel::getName()

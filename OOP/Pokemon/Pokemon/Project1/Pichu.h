@@ -1,12 +1,15 @@
 #pragma once
 #include "Pokemon.h"
+#include "Pikachu.h"
 class Pichu :
 	public Pokemon
 {
 public:
 	Pichu();
 
-	char* getName();
-
 	~Pichu();
+
+	char * getName();
+
+	virtual Pokemon* getEvolution();
 };

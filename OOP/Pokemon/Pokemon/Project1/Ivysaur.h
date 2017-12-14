@@ -5,6 +5,9 @@ class Ivysaur :
 {
 public:
 	Ivysaur();
+
+	char* getName();
+
 	~Ivysaur();
 };
 

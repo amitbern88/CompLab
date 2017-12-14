@@ -47,6 +47,18 @@ char* Pokemon::getName()
 	return 0;
 }
 
+bool Pokemon::shouldEvolve()
+{
+	if (mXp >= 50 && mCanEvolve)
+		return true;
+	return false;
+}
+
+Pokemon * Pokemon::getEvolution()
+{
+	return nullptr;
+}
+
 Pokemon::~Pokemon()
 {
 	delete[evolutionLevel](fightingMethods);
