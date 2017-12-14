@@ -17,6 +17,8 @@ public:
 
 	void printAvailablePokemons();
 
+	void printStatus();
+
 	Pokemon* getPokemon(int index);
 
 	~Player();

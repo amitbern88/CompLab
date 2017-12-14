@@ -80,7 +80,7 @@ void PokeList::printPokeList()
 	int i = 1;
 	while (iterator != NULL)
 	{
-		cout << i++ << ": " << iterator->data->getName() << endl;
+		cout << i++ << ": " << iterator->data->getName() << "	XP: " << iterator->data->getXP() << endl;
 		iterator = iterator->nextNode;
 	}
 }

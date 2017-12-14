@@ -6,6 +6,7 @@ Pokemon::Pokemon(PokemonType pokeType, int evolution) : type(pokeType), evolutio
 {
 	fightingMethods = new FightingMethod[evolution];
 	fightingMethods[0] = FightingMethod("Tackle", 1);
+	mXp = 20;
 }
 
 int Pokemon::basicAttack()
@@ -31,7 +32,6 @@ FightingMethod Pokemon::chooseFightingMethods()
 
 void Pokemon::PokemonWon() //Raise XP by 5 pts
 {
-	cout << "Congratsulations! " << getName() << " won! +5XP" << endl;
 	mXp = mXp + 5;
 	roundsWon++;
 }

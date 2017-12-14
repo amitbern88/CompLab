@@ -11,15 +11,15 @@ BattleGround::~BattleGround()
 
 int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 {
-	mRounds = 3;
+	mRounds = 1;
 	inPlayer1.clearRoundsWon();
 	inPlayer2.clearRoundsWon();
 	int winType;
 	bool moreThan30;
-	while (mRounds > 0)
+	while (mRounds <= 3)
 	{
-		cout << "Round: " << mRounds%3 + 1 << " Fight!" << endl;
-		mRounds--;
+		cout << "Round: " << mRounds << " Fight!" << endl;
+		mRounds++;
 		cout << "Player 1 please Choose Fighting Method: " << endl;
 		FightingMethod method1 = inPlayer1.chooseFightingMethods();
 		cout << "Player 2 please Choose Fighting Method: " << endl;
@@ -29,25 +29,25 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 		if (winType != 0 && !moreThan30) //Check pokemon family
 		{
 			if (winType == 1)
-				finishRound(inPlayer1, inPlayer2);
+				finishRound(1, inPlayer1, inPlayer2);
 			else
-				finishRound(inPlayer2, inPlayer1);
+				finishRound(2, inPlayer2, inPlayer1);
 		}
 		else if (inPlayer1.getXP() > inPlayer2.getXP()) //XP Superiority
-			finishRound(inPlayer1, inPlayer2);
+			finishRound(1, inPlayer1, inPlayer2);
 		else if (inPlayer1.getXP() < inPlayer2.getXP())
-			finishRound(inPlayer2, inPlayer1);
+			finishRound(2, inPlayer2, inPlayer1);
 		else if (method1.getLvl() > method2.getLvl()) //Player 1 is stronger than 2
-			finishRound(inPlayer1, inPlayer2);
+			finishRound(1, inPlayer1, inPlayer2);
 		else if (method1.getLvl() < method2.getLvl())//Player 2 is stronger than 1
-			finishRound(inPlayer2, inPlayer1);
+			finishRound(2, inPlayer2, inPlayer1);
 		else if (method1.getName() == method2.getName()) //players chose same fighting method
 		{
 			int randomStart = rand();
 			if (randomStart >= 0.5) //Player 1 won the round
-				finishRound(inPlayer1, inPlayer2);
+				finishRound(1, inPlayer1, inPlayer2);
 			else
-				finishRound(inPlayer2, inPlayer1);
+				finishRound(2, inPlayer2, inPlayer1);
 		}
 		if (inPlayer1.getRoundsWon() == 2 || inPlayer2.getRoundsWon() == 2) //Which player won 2/3 rounds
 		{
@@ -98,8 +98,11 @@ bool BattleGround::XpDiffMoreThan30(Pokemon & inPoke1, Pokemon & inPoke2){
 	return false;
 }
 
-void BattleGround::finishRound(Pokemon & winner, Pokemon & loser)
+void BattleGround::finishRound(int winnerIndex, Pokemon & winner, Pokemon & loser)
 {
+	int loserIndex = winnerIndex == 1 ? 2 : 1;
+	cout << "Player " << winnerIndex << ", congratulations! You won round " << mRounds << "! " << winner.getName() << " +5XP" << endl;
 	winner.PokemonWon();
+	cout << "Player " << loserIndex << ", too bad, You lost round " << mRounds << ". " << loser.getName() << " -5XP" << endl;
 	loser.PokemonLost();
 }

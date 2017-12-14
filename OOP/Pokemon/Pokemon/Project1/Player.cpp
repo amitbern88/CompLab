@@ -29,6 +29,12 @@ void Player::printAvailablePokemons()
 	pokemons.printPokeList();
 }
 
+void Player::printStatus()
+{
+	cout << "Player " << index << "'s pokemons:" << endl;
+	printAvailablePokemons();
+}
+
 Pokemon * Player::getPokemon(int index)
 {
 	return pokemons.get(index);
