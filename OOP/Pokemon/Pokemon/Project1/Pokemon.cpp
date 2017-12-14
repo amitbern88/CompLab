@@ -1,7 +1,6 @@
 #include "Pokemon.h"
 #include <exception>
 
-
 Pokemon::Pokemon(PokemonType pokeType, int evolutionLevel) : type(pokeType), evolutionLevel(evolutionLevel)
 {
 	fightingMethods = new FightingMethod[evolutionLevel];

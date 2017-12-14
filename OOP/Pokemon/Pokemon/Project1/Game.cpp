@@ -17,8 +17,8 @@ void Game::setup()
 	srand(time(NULL));
 	for (i = 0; i < 3; i++)
 	{
-		player1->receivePokemon(createPokemon(Pokemons(rand() % 6)));
-		player2->receivePokemon(createPokemon(Pokemons(rand() % 6)));
+		player1->receivePokemon(createPokemon(Pokemons(rand() % 6))); //Choose randomly between 6 pokemons
+		player2->receivePokemon(createPokemon(Pokemons(rand() % 6))); //Choose randomly between 6 pokemons
 	}
 	
 }
@@ -116,7 +116,7 @@ bool Game::gameIsNotFinished()
 
 void Game::handleBattleFinish(Player * player, Pokemon * pokemon)
 {
-	if (pokemon->shouldEvolve())
+	if (pokemon->shouldEvolve()) //if pokemon got at least 50XP it need to evolve
 		player->evolvePokemon(pokemon, pokemon->getEvolution());
 	else if (pokemon->getXP() <= 0)
 		player->killPokemon(pokemon);
