@@ -6,6 +6,11 @@ Pikachu::Pikachu() : Pokemon(Pokemon::PokemonType::eElectricity, 2)
 	fightingMethods[1] = FightingMethod("Electric Punch", 2);
 }
 
+Pikachu::Pikachu(PokemonType pokeType, int evolutionLevel) : Pokemon(pokeType, evolutionLevel)
+{
+	fightingMethods[1] = FightingMethod("Electric Punch", 2);
+}
+
 Pikachu::~Pikachu()
 {
 }

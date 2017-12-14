@@ -1,7 +1,7 @@
 #pragma once
 #include "Ivysaur.h"
 class Venusaur :
-	public Pokemon
+	public Ivysaur
 {
 public:
 	Venusaur();

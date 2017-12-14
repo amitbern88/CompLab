@@ -5,6 +5,7 @@ class Ivysaur :
 {
 public:
 	Ivysaur();
+	Ivysaur(PokemonType pokeType, int evolutionLevel);
 
 	char* getName();
 

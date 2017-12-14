@@ -10,14 +10,11 @@ using namespace std;
 
 class Pokemon
 {
-	
-	int mXp;
-
-	int evolutionLevel;
 	int roundsWon;
 	
-
 protected:
+	int mXp;
+	int evolutionLevel;
 	bool mCanEvolve;
 	FightingMethod* fightingMethods;
 

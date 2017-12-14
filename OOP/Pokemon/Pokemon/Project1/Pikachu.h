@@ -6,6 +6,7 @@ class Pikachu :
 {
 public:
 	Pikachu();
+	Pikachu(PokemonType pokeType, int evolutionLevel);
 
 	~Pikachu();
 

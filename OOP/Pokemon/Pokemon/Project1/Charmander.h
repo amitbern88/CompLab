@@ -1,13 +1,14 @@
 #pragma once
 #include "Pokemon.h"
+#include "Charmeleon.h"
 class Charmander :
 	public Pokemon
 {
 public:
 	Charmander();
-	
-	char* getName();
-
 	~Charmander();
+
+	char* getName();
+	Pokemon* getEvolution();
 };
 

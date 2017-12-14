@@ -1,7 +1,7 @@
 #pragma once
 #include "Pikachu.h"
 class Raichu :
-	public Pokemon
+	public Pikachu
 {
 public:
 	Raichu();
