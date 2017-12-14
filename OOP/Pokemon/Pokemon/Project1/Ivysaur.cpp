@@ -1,7 +1,5 @@
 #include "Ivysaur.h"
 
-
-
 Ivysaur::Ivysaur(int inXP) : Pokemon(Pokemon::PokemonType::eEarth, 2, inXP)
 {
 	mCanEvolve = true;

@@ -73,7 +73,7 @@ void PokeList::remove(Pokemon* pokemon)
 {
 	ListNode* toDelete = head;
 	ListNode* prevToDelete = NULL;
-	findPokemonToDelete(pokemon, toDelete, prevToDelete);
+	findPokemonToDelete(pokemon, toDelete, prevToDelete); //delete pokemon and move list pointer
 	if (toDelete == NULL)
 	{
 		cout << pokemon->getName() << " is not in this list!" << endl;
@@ -93,7 +93,7 @@ void PokeList::remove(Pokemon* pokemon)
 	size--;
 }
 
-void PokeList::replace(Pokemon * original, Pokemon * newPokemon)
+void PokeList::replace(Pokemon * original, Pokemon * newPokemon) //when a pokemon is evolving we need to get the next stage and delete the old one
 {
 	ListNode* originalNode = head;
 	ListNode* prevOriginalNode = NULL;
