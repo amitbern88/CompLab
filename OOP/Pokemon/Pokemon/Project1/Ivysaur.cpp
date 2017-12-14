@@ -15,3 +15,8 @@ char* Ivysaur::getName()
 Ivysaur::~Ivysaur()
 {
 }
+
+Pokemon * Ivysaur::getEvolution()
+{
+	return nullptr;
+}
