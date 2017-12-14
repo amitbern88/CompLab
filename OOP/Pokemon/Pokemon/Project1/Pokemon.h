@@ -43,11 +43,11 @@ public:
 
 	int getXP() { return mXp; };
 	
-	void clearRoundsWon() { roundsWon = 0; };
+	void clearRoundsWon();
 
-	void incrementRoundsWon() { roundsWon++; };
+	void incrementRoundsWon();
 
-	int getRoundsWon() { return roundsWon; };
+	int getRoundsWon();
 
 	bool shouldEvolve();
 

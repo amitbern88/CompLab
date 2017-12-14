@@ -51,6 +51,21 @@ void Pokemon::PokemonLost() //Reduce XP by 5 pts
 	mXp = mXp - 5;
 }
 
+void Pokemon::clearRoundsWon()
+{
+	roundsWon = 0;
+}
+
+void Pokemon::incrementRoundsWon()
+{
+	roundsWon++;
+}
+
+int Pokemon::getRoundsWon()
+{
+	return roundsWon;
+}
+
 char* Pokemon::getName()
 {
 	return 0;
