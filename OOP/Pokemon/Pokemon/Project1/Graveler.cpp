@@ -1,6 +1,6 @@
 #include "Graveler.h"
 
-Graveler::Graveler(int inXP) : Pokemon(Pokemon::PokemonType::eEarth, 2, inXP)
+Graveler::Graveler(int inXP) : Pokemon(eEarth, 2, inXP)
 {
 	mCanEvolve = true;
 	fightingMethods[1] = FightingMethod("Rock Throw", 2);

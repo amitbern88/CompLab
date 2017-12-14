@@ -2,7 +2,7 @@
 
 
 
-Bulbasaur::Bulbasaur() : Pokemon(Pokemon::PokemonType::eEarth, 1)
+Bulbasaur::Bulbasaur() : Pokemon(eEarth, 1)
 {
 }
 

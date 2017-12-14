@@ -1,6 +1,6 @@
 #include "Golem.h"
 
-Golem::Golem(int inXP) : Pokemon(Pokemon::PokemonType::eEarth, 3, inXP)
+Golem::Golem(int inXP) : Pokemon(eEarth, 3, inXP)
 {
 	mCanEvolve = true;
 	fightingMethods[1] = FightingMethod("Rock Throw", 2);

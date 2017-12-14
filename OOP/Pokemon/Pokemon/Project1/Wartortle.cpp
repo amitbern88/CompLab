@@ -1,6 +1,6 @@
 #include "Wartortle.h"
 
-Wartortle::Wartortle(int inXP) : Pokemon(Pokemon::PokemonType::eAquatic, 2, inXP)
+Wartortle::Wartortle(int inXP) : Pokemon(eAquatic, 2, inXP)
 {
 	mCanEvolve = true;
 	fightingMethods[1] = FightingMethod("Water Gun", 2);

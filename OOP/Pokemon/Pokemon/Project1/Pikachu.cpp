@@ -1,6 +1,6 @@
 #include "Pikachu.h"
 
-Pikachu::Pikachu(int inXP) : Pokemon(Pokemon::PokemonType::eElectricity, 2, inXP)
+Pikachu::Pikachu(int inXP) : Pokemon(eElectricity, 2, inXP)
 {
 	mCanEvolve = true;
 	fightingMethods[1] = FightingMethod("Electric Punch", 2);

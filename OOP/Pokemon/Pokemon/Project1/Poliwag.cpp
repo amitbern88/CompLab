@@ -1,6 +1,6 @@
 #include "Poliwag.h"
 
-Poliwag::Poliwag() : Pokemon(Pokemon::PokemonType::eAquatic, 1)
+Poliwag::Poliwag() : Pokemon(eAquatic, 1)
 {
 	mCanEvolve = true;
 }

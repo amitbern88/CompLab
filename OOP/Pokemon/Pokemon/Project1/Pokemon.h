@@ -7,7 +7,12 @@
 #pragma once
 
 using namespace std;
-
+enum PokemonType {
+	eAquatic = 0,
+	eFire = 1,
+	eEarth = 2,
+	eElectricity = 3
+};
 class Pokemon
 {
 	int roundsWon;
@@ -19,13 +24,6 @@ protected:
 	FightingMethod* fightingMethods;
 
 public:
-
-	enum PokemonType {
-		eAquatic = 0,
-		eFire = 1,
-		eEarth = 2,
-		eElectricity = 3
-	};
 
 	PokemonType type;
 

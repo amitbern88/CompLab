@@ -69,26 +69,26 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 	return 0;
 }
 
-int BattleGround::getWinningType(Pokemon::PokemonType type1, Pokemon::PokemonType type2)
+int BattleGround::getWinningType(PokemonType type1, PokemonType type2)
 {
-	if (type1 == Pokemon::PokemonType::eElectricity && type2 == Pokemon::PokemonType::eAquatic)
+	if (type1 == eElectricity && type2 == eAquatic)
 		return 1;
-	if (type1 == Pokemon::PokemonType::eAquatic && type2 == Pokemon::PokemonType::eElectricity)
+	if (type1 == eAquatic && type2 == eElectricity)
 		return 2;
 	
-	if (type1 == Pokemon::PokemonType::eAquatic && type2 == Pokemon::PokemonType::eFire)
+	if (type1 == eAquatic && type2 == eFire)
 		return 1;
-	if (type1 == Pokemon::PokemonType::eFire && type2 == Pokemon::PokemonType::eAquatic)
+	if (type1 == eFire && type2 == eAquatic)
 		return 2;
 
-	if (type1 == Pokemon::PokemonType::eEarth && type2 == Pokemon::PokemonType::eElectricity)
+	if (type1 == eEarth && type2 == eElectricity)
 		return 1;
-	if (type1 == Pokemon::PokemonType::eElectricity && type2 == Pokemon::PokemonType::eEarth)
+	if (type1 == eElectricity && type2 == eEarth)
 		return 2;
 
-	if (type1 == Pokemon::PokemonType::eFire && type2 == Pokemon::PokemonType::eEarth)
+	if (type1 == eFire && type2 == eEarth)
 		return 1;
-	if (type1 == Pokemon::PokemonType::eEarth && type2 == Pokemon::PokemonType::eFire)
+	if (type1 == eEarth && type2 == eFire)
 		return 2;
 
 	return 0;

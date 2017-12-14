@@ -1,6 +1,6 @@
 #include "Venusaur.h"
 
-Venusaur::Venusaur(int inXP) : Pokemon(Pokemon::PokemonType::eEarth, 3, inXP)
+Venusaur::Venusaur(int inXP) : Pokemon(eEarth, 3, inXP)
 {
 	mCanEvolve = false;
 	fightingMethods[1] = FightingMethod("Vine Whip", 2);

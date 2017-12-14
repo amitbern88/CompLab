@@ -2,7 +2,7 @@
 
 
 
-Squirtel::Squirtel() : Pokemon(Pokemon::PokemonType::eAquatic, 1)
+Squirtel::Squirtel() : Pokemon(eAquatic, 1)
 {
 	mCanEvolve = true;
 }

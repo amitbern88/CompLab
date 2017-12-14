@@ -10,14 +10,6 @@
 #include <ctime>
 #include <stdlib.h> 
 #include <iostream>
-
-class Game
-{
-	Player* player1;
-	Player* player2;
-	
-	BattleGround battleground;
-
 	enum Pokemons {
 		eBulbasaur = 0,
 		eCharmander = 1,
@@ -26,6 +18,16 @@ class Game
 		eGeodude = 4,
 		ePoliwag = 5
 	};
+class Game
+{
+	Player* player1;
+	Player* player2;
+	
+	BattleGround battleground;
+
+
+
+	Pokemons pokeList;
 public:
 	Game();
 

@@ -1,6 +1,6 @@
 #include "Raichu.h"
 
-Raichu::Raichu(int inXP) : Pokemon(Pokemon::PokemonType::eElectricity, 3, inXP)
+Raichu::Raichu(int inXP) : Pokemon(eElectricity, 3, inXP)
 {
 	mCanEvolve = false;
 	fightingMethods[1] = FightingMethod("Electric Punch", 2);

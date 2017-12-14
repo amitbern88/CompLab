@@ -1,6 +1,6 @@
 #include "Geodude.h"
 
-Geodude::Geodude() : Pokemon(Pokemon::PokemonType::eEarth, 1)
+Geodude::Geodude() : Pokemon(eEarth, 1)
 {
 	mCanEvolve = true;
 }

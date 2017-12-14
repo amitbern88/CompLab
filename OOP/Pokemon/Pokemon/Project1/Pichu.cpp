@@ -2,7 +2,7 @@
 
 
 
-Pichu::Pichu() : Pokemon(Pokemon::PokemonType::eElectricity, 1)
+Pichu::Pichu() : Pokemon(eElectricity, 1)
 {
 	mCanEvolve = true;
 }
