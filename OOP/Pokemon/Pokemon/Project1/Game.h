@@ -2,6 +2,8 @@
 #include "Player.h"
 #include "Bulbasaur.h"
 #include "Charmander.h"
+#include "Squirtel.h"
+#include "Pichu.h"
 #include "BattleGround.h"
 #include <ctime>
 #include <stdlib.h> 
@@ -16,7 +18,9 @@ class Game
 
 	enum Pokemons {
 		eBulbasaur,
-		eCharmander
+		eCharmander,
+		ePichu,
+		eSquirtel
 	};
 public:
 	Game();
