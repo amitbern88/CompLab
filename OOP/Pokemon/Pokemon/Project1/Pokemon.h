@@ -31,6 +31,7 @@ public:
 
 	Pokemon(PokemonType pokeType, int evolutionLevel);
 	Pokemon(PokemonType pokeType, int evolutionLevel, int inXP);
+	virtual ~Pokemon();
 
 	int basicAttack();
 
@@ -51,8 +52,6 @@ public:
 	bool shouldEvolve();
 
 	virtual Pokemon* getEvolution();
-	
-	~Pokemon();
 };
 
 #endif
