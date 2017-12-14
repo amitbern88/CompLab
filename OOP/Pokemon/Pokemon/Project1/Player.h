@@ -19,6 +19,10 @@ public:
 
 	void printStatus();
 
+	void killPokemon(Pokemon* pokemon);
+
+	void evolvePokemon(Pokemon* existing, Pokemon* toEvolve);
+
 	Pokemon* getPokemon(int index);
 
 	~Player();

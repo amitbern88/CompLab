@@ -35,5 +35,7 @@ public:
 
 private:
 	bool gameIsNotFinished();
+
+	void handleBattleFinish(Player* player, Pokemon* pokemon);
 };
 

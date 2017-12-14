@@ -41,6 +41,9 @@ void Game::start()
 		Pokemon* pokemon2 = player2->getPokemon(player2chose);
 		int winner = battleground.battle((*pokemon1), (*pokemon2));
 		cout << "Player " << winner << " won the battle!" << endl;
+		handleBattleFinish(player1, pokemon1);
+		handleBattleFinish(player2, pokemon2);
+
 		while (printSubMenu)
 		{
 			cout << "Press (1) to play another battle\nPress (2) to display players status\nPress (3) to exit" << endl;
@@ -62,7 +65,7 @@ void Game::start()
 			}
 		}
 		if (input == 3) //exit game
-			break;
+			continue;
 	}
 }
 
@@ -90,4 +93,12 @@ Game::~Game()
 bool Game::gameIsNotFinished()
 {
 	return player1->hasLivePokemons() && player2->hasLivePokemons();
+}
+
+void Game::handleBattleFinish(Player * player, Pokemon * pokemon)
+{
+	if (pokemon->shouldEvolve())
+		player->evolvePokemon(pokemon, pokemon->getEvolution());
+	else if (pokemon->getXP() < 0)
+		player->killPokemon(pokemon);
 }

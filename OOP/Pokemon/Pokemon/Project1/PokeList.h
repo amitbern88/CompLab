@@ -15,7 +15,14 @@ public:
 
 	void remove(int index);
 
+	void remove(Pokemon* pokemon);
+
+	void replace(Pokemon* original, Pokemon* newPokemon);
+
 	void printPokeList();
 
 	~PokeList();
+
+private:
+	void findPokemonToDelete(Pokemon* pokemon, ListNode* toDelete, ListNode* prevToDelete);
 };

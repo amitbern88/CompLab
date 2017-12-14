@@ -69,6 +69,35 @@ void PokeList::remove(int index)
 	}
 }
 
+void PokeList::remove(Pokemon* pokemon)
+{
+	ListNode* toDelete = NULL;
+	ListNode* prevToDelete = NULL;
+	findPokemonToDelete(pokemon, toDelete, prevToDelete);
+	if (toDelete == NULL)
+	{
+		cout << "Pokemon is not in this list!" << endl;
+		return;
+	}
+	if (prevToDelete == NULL)
+	{
+		head = head->nextNode;
+	}
+	else
+	{
+		prevToDelete->nextNode = toDelete->nextNode;
+	}
+	delete(toDelete->data);
+	delete(toDelete);
+	size--;
+	cout << "Pokemon " << pokemon->getName() << " was killed" << endl;
+}
+
+void PokeList::replace(Pokemon * original, Pokemon * newPokemon)
+{
+
+}
+
 void PokeList::printPokeList()
 {
 	if (head == NULL)
@@ -100,5 +129,18 @@ PokeList::~PokeList()
 			delete(prev->data);
 			delete(prev);
 		}
+	}
+}
+
+void PokeList::findPokemonToDelete(Pokemon * pokemon, ListNode * toDelete, ListNode * prevToDelete)
+{
+	bool found = false;
+	int i;
+	toDelete = head;
+	prevToDelete = NULL;
+	while (!found && toDelete != NULL && (toDelete->data != pokemon))
+	{
+		prevToDelete = toDelete;
+		toDelete = toDelete->nextNode;
 	}
 }
