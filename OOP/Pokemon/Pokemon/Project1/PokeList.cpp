@@ -95,7 +95,19 @@ void PokeList::remove(Pokemon* pokemon)
 
 void PokeList::replace(Pokemon * original, Pokemon * newPokemon)
 {
-
+	ListNode* originalNode = head;
+	ListNode* prevOriginalNode = NULL;
+	findPokemonToDelete(original, originalNode, prevOriginalNode);
+	if (originalNode != NULL)
+	{
+		Pokemon* toDelete = originalNode->data;
+		originalNode->data = newPokemon;
+		delete(toDelete);
+	}
+	else
+	{
+		cout << original->getName() << " isn't in this list, couldn't replace" << endl;
+	}
 }
 
 void PokeList::printPokeList()

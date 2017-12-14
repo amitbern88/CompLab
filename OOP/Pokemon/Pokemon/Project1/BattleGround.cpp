@@ -64,6 +64,7 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 		mRounds++;
 		system("pause");
 	}
+	return 0;
 }
 
 int BattleGround::getWinningType(Pokemon::PokemonType type1, Pokemon::PokemonType type2)
