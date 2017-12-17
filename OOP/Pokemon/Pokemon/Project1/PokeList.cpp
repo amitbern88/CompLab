@@ -15,11 +15,8 @@ void PokeList::add(Pokemon * toAdd)
 	}
 	else
 	{
-		ListNode* iterator = head;
-		while (iterator->nextNode != 0)
-			iterator = iterator->nextNode;
-		ListNode* newNode = new ListNode(NULL, toAdd);
-		iterator->nextNode = newNode;
+		ListNode* newNode = new ListNode(head, toAdd);
+		head = newNode;
 	}
 	size++;
 }
@@ -33,38 +30,6 @@ Pokemon* PokeList::get(int index)
 		iterator = iterator->nextNode;
 	}
 	return iterator->data;
-}
-
-void PokeList::remove(int index)
-{
-	if (index > size)
-	{
-		cout << "Illegal index!" << endl;
-		return;
-	}
-	else
-	{
-		int i;
-		ListNode* iterator = head;
-		ListNode* prev = NULL;
-		for (i = 0; i < index; i++)
-		{
-			prev = iterator;
-			iterator = iterator->nextNode;
-		}
-		if (prev == NULL)
-		{
-			head = head->nextNode;
-		}
-		else
-		{
-			prev->nextNode = iterator->nextNode;
-		}
-		delete(iterator->data);
-		delete(iterator);
-		size--;
-		cout << "Pokemon List at index " << index << " was deleted" << endl;
-	}
 }
 
 void PokeList::remove(Pokemon* pokemon)

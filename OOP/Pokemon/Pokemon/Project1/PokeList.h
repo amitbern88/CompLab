@@ -13,8 +13,6 @@ public:
 
 	Pokemon* get(int index);
 
-	void remove(int index);
-
 	void remove(Pokemon* pokemon);
 
 	void replace(Pokemon* original, Pokemon* newPokemon);
