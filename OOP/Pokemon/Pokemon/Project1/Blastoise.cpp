@@ -11,7 +11,7 @@ Blastoise::~Blastoise()
 {
 }
 
-char * Blastoise::getName()
+const char * Blastoise::getName()
 {
 	return "Blastoise";
 }

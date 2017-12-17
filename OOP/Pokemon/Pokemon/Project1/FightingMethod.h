@@ -10,7 +10,7 @@ public:
 	FightingMethod();
 	FightingMethod(char* inName, int inLvl);
 	~FightingMethod() {};
-	char* getName() { return methodName; };
+	const char* getName() { return methodName; };
 	int getLvl() { return lvl; };
 };
 

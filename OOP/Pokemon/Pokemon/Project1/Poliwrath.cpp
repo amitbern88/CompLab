@@ -11,7 +11,7 @@ Poliwrath::~Poliwrath()
 {
 }
 
-char * Poliwrath::getName()
+const char * Poliwrath::getName()
 {
 	return "Poliwrath";
 }

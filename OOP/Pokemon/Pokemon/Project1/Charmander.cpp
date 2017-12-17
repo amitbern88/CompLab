@@ -5,7 +5,7 @@ Charmander::Charmander() : Pokemon(eFire, 1)
 	mCanEvolve = true;
 }
 
-char* Charmander::getName()
+const char* Charmander::getName()
 {
 	return "Charmander";
 }

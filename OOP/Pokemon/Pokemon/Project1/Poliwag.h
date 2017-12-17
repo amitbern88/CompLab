@@ -8,7 +8,7 @@ public:
 	Poliwag();
 	~Poliwag();
 
-	char* getName();
+	const char* getName();
 	Pokemon* getEvolution();
 
 };

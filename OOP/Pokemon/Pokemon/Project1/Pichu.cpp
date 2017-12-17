@@ -7,7 +7,7 @@ Pichu::Pichu() : Pokemon(eElectricity, 1)
 	mCanEvolve = true;
 }
 
-char* Pichu::getName()
+const char* Pichu::getName()
 {
 	return "Pichu";
 }

@@ -7,7 +7,7 @@ class Ivysaur :
 public:
 	Ivysaur(int inXP);
 
-	char* getName();
+	const char* getName();
 
 	~Ivysaur();
 

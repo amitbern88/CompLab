@@ -8,6 +8,6 @@ class Charizard :
 public:
 	Charizard(int inXP);
 	~Charizard();
-	char* getName();
+	const char* getName();
 };
 

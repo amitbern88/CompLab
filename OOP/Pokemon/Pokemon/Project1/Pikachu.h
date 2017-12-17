@@ -8,7 +8,7 @@ public:
 	Pikachu(int inXP);
 	~Pikachu();
 
-	char* getName();
+	const char* getName();
 
 	Pokemon* getEvolution();
 };

@@ -10,7 +10,7 @@ Poliwhirl::~Poliwhirl()
 {
 }
 
-char * Poliwhirl::getName()
+const char * Poliwhirl::getName()
 {
 	return "Poliwhirl";
 }

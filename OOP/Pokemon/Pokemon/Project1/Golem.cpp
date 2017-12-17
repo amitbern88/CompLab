@@ -11,7 +11,7 @@ Golem::~Golem()
 {
 }
 
-char * Golem::getName()
+const char * Golem::getName()
 {
 	return "Golem";
 }

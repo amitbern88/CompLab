@@ -8,7 +8,7 @@ public:
 	Wartortle(int inXP);
 	~Wartortle();
 
-	char* getName();
+	const char* getName();
 
 	Pokemon* getEvolution();
 };

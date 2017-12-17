@@ -10,7 +10,7 @@ public:
 
 	~Geodude();
 
-	char* getName();
+	const char* getName();
 	Pokemon* getEvolution();
 
 

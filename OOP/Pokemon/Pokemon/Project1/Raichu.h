@@ -8,6 +8,6 @@ public:
 
 	~Raichu();
 
-	char* getName();
+	const char* getName();
 
 }; 

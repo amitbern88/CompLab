@@ -9,7 +9,7 @@ public:
 
 	~Bulbasaur();
 
-	char* getName();
+	const char* getName();
 
 	Pokemon* getEvolution();
 

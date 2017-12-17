@@ -7,6 +7,6 @@ class Charmeleon :
 public:
 	Charmeleon(int inXP);
 	~Charmeleon();
-	char* getName();
+	const char* getName();
 	Pokemon* getEvolution();
 };

@@ -10,7 +10,7 @@ Pikachu::~Pikachu()
 {
 }
 
-char * Pikachu::getName()
+const char * Pikachu::getName()
 {
 	return "Pikachu";
 }

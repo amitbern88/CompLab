@@ -9,5 +9,5 @@ public:
 
 	~Golem();
 
-	char* getName();
+	const char* getName();
 };

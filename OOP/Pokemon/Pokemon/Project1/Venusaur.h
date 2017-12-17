@@ -8,6 +8,6 @@ public:
 	
 	~Venusaur();
 
-	char* getName();
+	const char* getName();
 
 }; 

@@ -9,7 +9,7 @@ Poliwag::~Poliwag()
 {
 }
 
-char * Poliwag::getName()
+const char * Poliwag::getName()
 {
 	return "Poliwag";
 }

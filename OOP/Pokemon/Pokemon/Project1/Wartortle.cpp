@@ -10,7 +10,7 @@ Wartortle::~Wartortle()
 {
 }
 
-char * Wartortle::getName()
+const char * Wartortle::getName()
 {
 	return "Wartortle";
 }

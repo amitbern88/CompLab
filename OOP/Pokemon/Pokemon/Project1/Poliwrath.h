@@ -7,5 +7,5 @@ public:
 	Poliwrath(int inXP);
 	~Poliwrath();
 
-	char* getName();
+	const char* getName();
 };

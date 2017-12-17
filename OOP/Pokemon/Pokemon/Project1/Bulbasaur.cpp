@@ -6,7 +6,7 @@ Bulbasaur::Bulbasaur() : Pokemon(eEarth, 1)
 {
 }
 
-char* Bulbasaur::getName()
+const char* Bulbasaur::getName()
 {
 	return "Bulbasaur";
 }

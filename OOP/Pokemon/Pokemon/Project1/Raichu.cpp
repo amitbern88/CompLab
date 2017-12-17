@@ -11,7 +11,7 @@ Raichu::~Raichu()
 {
 }
 
-char * Raichu::getName()
+const char * Raichu::getName()
 {
 	return "Raichu";
 }

@@ -11,7 +11,7 @@ Venusaur::~Venusaur()
 {
 }
 
-char * Venusaur::getName()
+const char * Venusaur::getName()
 {
 	return "Venusaur";
 }

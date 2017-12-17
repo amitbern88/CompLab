@@ -8,7 +8,7 @@ public:
 	Poliwhirl(int inXP);
 	~Poliwhirl();
 
-	char* getName();
+	const char* getName();
 	Pokemon* getEvolution();
 
 };

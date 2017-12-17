@@ -11,7 +11,7 @@ Graveler::~Graveler()
 {
 }
 
-char * Graveler::getName()
+const char * Graveler::getName()
 {
 	return "Graveler";
 }

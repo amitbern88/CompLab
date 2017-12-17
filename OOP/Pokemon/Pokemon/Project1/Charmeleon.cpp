@@ -11,7 +11,7 @@ Charmeleon::~Charmeleon()
 {
 }
 
-char * Charmeleon::getName()
+const char * Charmeleon::getName()
 {
 	return "Charmeleon";
 }

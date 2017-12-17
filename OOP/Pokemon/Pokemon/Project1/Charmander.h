@@ -8,7 +8,7 @@ public:
 	Charmander();
 	~Charmander();
 
-	char* getName();
+	const char* getName();
 	Pokemon* getEvolution();
 };
 

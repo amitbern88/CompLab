@@ -66,7 +66,7 @@ int Pokemon::getRoundsWon()
 	return roundsWon;
 }
 
-char* Pokemon::getName()
+const char* Pokemon::getName()
 {
 	return 0;
 }

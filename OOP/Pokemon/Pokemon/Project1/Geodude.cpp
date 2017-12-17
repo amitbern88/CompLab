@@ -10,7 +10,7 @@ Geodude::~Geodude()
 {
 }
 
-char * Geodude::getName()
+const char * Geodude::getName()
 {
 	return "Geodude";
 }

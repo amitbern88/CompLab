@@ -7,7 +7,7 @@ Ivysaur::Ivysaur(int inXP) : Pokemon(eEarth, 2, inXP)
 
 }
 
-char* Ivysaur::getName()
+const char* Ivysaur::getName()
 {
 	return "Ivysaur";
 }

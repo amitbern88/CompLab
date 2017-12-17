@@ -11,7 +11,7 @@ Charizard::~Charizard()
 {
 }
 
-char * Charizard::getName()
+const char * Charizard::getName()
 {
 	return "Charizard";
 }

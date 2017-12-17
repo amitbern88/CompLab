@@ -7,6 +7,6 @@ public:
 	Blastoise(int inXP);
 	~Blastoise();
 
-	char* getName();
+	const char* getName();
 
 };

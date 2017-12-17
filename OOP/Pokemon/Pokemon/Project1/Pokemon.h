@@ -1,4 +1,3 @@
-
 #ifndef POKEMON_H
 #define POKEMON_H
 
@@ -27,7 +26,7 @@ public:
 
 	PokemonType type;
 
-	virtual char* getName();
+	virtual const char* getName();
 
 	Pokemon(PokemonType pokeType, int evolutionLevel);
 	Pokemon(PokemonType pokeType, int evolutionLevel, int inXP);
