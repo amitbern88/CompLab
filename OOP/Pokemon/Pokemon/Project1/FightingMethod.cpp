@@ -4,7 +4,7 @@ FightingMethod::FightingMethod()
 {
 }
 
-FightingMethod::FightingMethod(char * inName, int inLvl)
+FightingMethod::FightingMethod(const char * inName, int inLvl)
 {
 	methodName = inName;
 	lvl = inLvl;

@@ -1,5 +1,5 @@
 #include "Pokemon.h"
-#include <exception>
+#include <stdexcept>
 
 Pokemon::Pokemon(PokemonType pokeType, int evolutionLevel) : evolutionLevel(evolutionLevel), type(pokeType)
 {
