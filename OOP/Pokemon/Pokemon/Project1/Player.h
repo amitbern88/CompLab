@@ -25,6 +25,8 @@ public:
 
 	Pokemon* getPokemon(int index);
 
+	int getNumOfPokemons();
+
 	~Player();
 };
 

@@ -123,6 +123,7 @@ void PokeList::printPokeList()
 		cout << i++ << ": " << iterator->data->getName() << "	XP: " << iterator->data->getXP() << endl;
 		iterator = iterator->nextNode;
 	}
+	cout << endl;
 }
 
 

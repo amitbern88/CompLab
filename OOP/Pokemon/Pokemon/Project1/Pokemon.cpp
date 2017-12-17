@@ -1,5 +1,4 @@
 #include "Pokemon.h"
-#include <stdexcept>
 
 Pokemon::Pokemon(PokemonType pokeType, int evolutionLevel) : evolutionLevel(evolutionLevel), type(pokeType)
 {
@@ -28,16 +27,9 @@ FightingMethod Pokemon::chooseFightingMethods()
 	{
 		cout << i + 1 << ". " << fightingMethods[i].getName() << endl;
 	}
-	cout << "Please choose a method: " << endl;
-	cin >> index;
-	if (index <= evolutionLevel)
-	{
-		mXp = mXp - (index);
-		return fightingMethods[index - 1];
-	}
-	
-	//#TODO add exception for wrond input
-	throw invalid_argument("index");
+	index = rand() % i;
+	mXp = mXp - (index);
+	return fightingMethods[index - 1];
 }
 
 void Pokemon::PokemonWon() //Raise XP by 5 pts

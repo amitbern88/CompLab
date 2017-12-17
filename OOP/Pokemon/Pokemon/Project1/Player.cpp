@@ -42,6 +42,11 @@ Pokemon * Player::getPokemon(int index)
 	return pokemons.get(index);
 }
 
+int Player::getNumOfPokemons()
+{
+	return pokemons.size;
+}
+
 
 Player::~Player()
 {
