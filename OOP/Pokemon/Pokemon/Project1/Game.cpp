@@ -24,8 +24,7 @@ void Game::setup()
 
 void Game::start()
 {
-	int player1chose, player2chose, input;
-	bool printSubMenu;
+	int player1chose, player2chose;
 
 	printGameSetup();
 	//system("pause");
@@ -33,12 +32,11 @@ void Game::start()
 
 	while (gameIsNotFinished())
 	{
-		printSubMenu = true;
 		player1chose = rand() % player1->getNumOfPokemons();
 		Pokemon* pokemon1 = player1->getPokemon(player1chose);
 		cout << "Player 1 selected "<< pokemon1->getName() << " for battle!" << endl;
 		player2chose = rand() % player2->getNumOfPokemons();
-		Pokemon* pokemon2 = player2->getPokemon(player1chose);
+		Pokemon* pokemon2 = player2->getPokemon(player2chose);
 		cout << "Player 2 selected " << pokemon2->getName() << " for battle!" << endl;
 
 		int winner = battleground.battle((*pokemon1), (*pokemon2));

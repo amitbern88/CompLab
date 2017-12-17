@@ -2,8 +2,8 @@
 #define POKEMON_H
 
 #include <iostream>
+#include <stdlib.h>
 #include "FightingMethod.h"
-#pragma once
 
 using namespace std;
 enum PokemonType {
