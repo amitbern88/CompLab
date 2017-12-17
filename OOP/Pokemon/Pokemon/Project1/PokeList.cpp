@@ -109,7 +109,7 @@ PokeList::~PokeList()
 	}
 }
 
-void PokeList::findPokemonToDelete(Pokemon * pokemon, ListNode *& toDelete, ListNode *& prevToDelete)
+inline void PokeList::findPokemonToDelete(Pokemon * pokemon, ListNode *& toDelete, ListNode *& prevToDelete)
 {
 	bool found = false;
 	while (!found && toDelete != NULL)

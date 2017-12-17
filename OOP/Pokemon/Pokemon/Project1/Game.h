@@ -32,19 +32,17 @@ class Game
 public:
 	Game();
 
-	void setup();
-
 	void start();
-
-	Pokemon* createPokemon(Pokemons pokemonEnum);
 
 	~Game();
 
 private:
-	void printGameSetup();
+	inline Pokemon* createPokemon(Pokemons pokemonEnum);
 	
-	bool gameIsNotFinished();
+	inline void printGameSetup();
+	
+	inline bool gameIsNotFinished();
 
-	void handleBattleFinish(Player* player, Pokemon* pokemon);
+	inline void handleBattleFinish(Player* player, Pokemon* pokemon);
 };
 

@@ -7,7 +7,6 @@ int main()
 {
 	auto start = std::chrono::high_resolution_clock::now();
 	Game game = Game();
-	game.setup();
 	game.start();
 	auto finish = std::chrono::high_resolution_clock::now();
 

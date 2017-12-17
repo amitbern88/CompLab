@@ -6,7 +6,7 @@ Game::Game()
 {
 }
 
-void Game::setup()
+void Game::start()
 {
 	int i;
 
@@ -19,11 +19,7 @@ void Game::setup()
 		player1->receivePokemon(createPokemon(Pokemons(rand() % 6))); //Choose randomly between 6 pokemons
 		player2->receivePokemon(createPokemon(Pokemons(rand() % 6))); //Choose randomly between 6 pokemons
 	}
-	
-}
 
-void Game::start()
-{
 	int player1chose, player2chose;
 
 	printGameSetup();
@@ -60,7 +56,7 @@ void Game::start()
 	}
 }
 
-Pokemon* Game::createPokemon(Pokemons pokemonEnum)
+inline Pokemon* Game::createPokemon(Pokemons pokemonEnum)
 {
 	switch (pokemonEnum) {
 		case eBulbasaur:
@@ -85,7 +81,7 @@ Game::~Game()
 {
 }
 
-bool Game::gameIsNotFinished()
+inline bool Game::gameIsNotFinished()
 {
 	return player1->hasLivePokemons() && player2->hasLivePokemons();
 }

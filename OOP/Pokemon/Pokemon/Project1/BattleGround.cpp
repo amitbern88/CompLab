@@ -2,7 +2,6 @@
 
 BattleGround::BattleGround()
 {
-	mRounds = 3;
 }
 
 BattleGround::~BattleGround()
@@ -69,7 +68,7 @@ int BattleGround::battle(Pokemon & inPlayer1, Pokemon & inPlayer2)
 	return 0;
 }
 
-int BattleGround::getWinningType(PokemonType type1, PokemonType type2)
+inline int BattleGround::getWinningType(PokemonType type1, PokemonType type2)
 {
 	if (type1 == eElectricity && type2 == eAquatic)
 		return 1;
@@ -94,14 +93,14 @@ int BattleGround::getWinningType(PokemonType type1, PokemonType type2)
 	return 0;
 }
 
-bool BattleGround::XpDiffMoreThan30(Pokemon & inPoke1, Pokemon & inPoke2){
+inline bool BattleGround::XpDiffMoreThan30(Pokemon & inPoke1, Pokemon & inPoke2){
 
 	if (abs(inPoke1.getXP() - inPoke2.getXP()) > 30)
 		return true;
 	return false;
 }
 
-void BattleGround::finishRound(int winnerIndex, Pokemon & winner, Pokemon & loser)
+inline void BattleGround::finishRound(int winnerIndex, Pokemon & winner, Pokemon & loser)
 {
 	int loserIndex = winnerIndex == 1 ? 2 : 1;
 	cout << "Player " << winnerIndex << ", congratulations! You won round " << mRounds << "! " << winner.getName() << " gained 5 XP" << endl;
